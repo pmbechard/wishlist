@@ -2,6 +2,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
 }
 
 nav {
@@ -41,9 +43,9 @@ nav .logo-area {
   flex-direction: row;
   gap: 10px;
   cursor: pointer;
-  transition: all 0.2s ease-out;
   text-decoration: none;
   color: #e1a04d;
+  transition: all 0.2s ease-out;
 }
 .nav-link:hover {
   transform: scale(0.95);
@@ -76,4 +78,36 @@ nav .logo-area {
 
 .home-img {
   width: 100%;
+  display: block;
+}
+
+footer {
+  width: 100%;
+  background-color: #061817;
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+footer a {
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  color: #72c5a5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer a:hover {
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+footer a:active {
+  transform: scale(1);
+  opacity: 1;
+}
+footer small {
+  padding-right: 50px;
+  color: #e1a04d;
 }/*# sourceMappingURL=App.css.map */

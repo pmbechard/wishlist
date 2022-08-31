@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ShopPage from './components/ShopPage';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
           <Route path='/shop' element={<ShopPage />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 };

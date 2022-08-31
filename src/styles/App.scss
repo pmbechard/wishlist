@@ -6,13 +6,24 @@ $darkColour: #061817;
 $headerFont: 'Times New Roman', Times, serif;
 $bodyFont: Arial, Helvetica, sans-serif;
 
-// MIXINS
+$transition: all 0.2s ease-out;
 
+// MIXINS
 @mixin fCenter($dir: row) {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: $dir;
+}
+
+@mixin hover {
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+@mixin active {
+  transform: scale(1);
+  opacity: 1;
 }
 
 // RULES
@@ -21,6 +32,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: $bodyFont;
+  overscroll-behavior: none;
 }
 
 // NAVBAR
@@ -51,18 +63,16 @@ nav {
   @include fCenter();
   gap: 10px;
   cursor: pointer;
-  transition: all 0.2s ease-out;
   text-decoration: none;
   color: $lightColour;
+  transition: $transition;
 
   &:hover {
-    transform: scale(0.95);
-    opacity: 0.9;
+    @include hover;
   }
 
   &:active {
-    transform: scale(1);
-    opacity: 1;
+    @include active;
   }
 }
 
@@ -89,4 +99,40 @@ nav {
 
 .home-img {
   width: 100%;
+  display: block;
+}
+
+// FOOTER
+
+footer {
+  width: 100%;
+  background-color: $darkColour;
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+
+  a {
+    text-decoration: none;
+    transition: $transition;
+    color: #72c5a5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      @include hover;
+    }
+
+    &:active {
+      @include active;
+    }
+  }
+
+  small {
+    padding-right: 50px;
+    color: #e1a04d;
+  }
 }
