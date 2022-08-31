@@ -2,7 +2,7 @@ import React from 'react';
 import { AiFillHome, AiFillShopping } from 'react-icons/ai';
 import { BsFillPersonFill, BsBookmarkCheckFill } from 'react-icons/bs';
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
   return (
     <nav>
       <div className='logo-area'>
