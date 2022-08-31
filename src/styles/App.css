@@ -11,8 +11,8 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   padding: 0 10vw;
-  background-color: rgb(56, 56, 56);
-  color: rgb(210, 210, 210);
+  background-color: #061817;
+  color: #e1a04d;
 }
 nav .logo-area {
   width: 50%;
@@ -43,13 +43,37 @@ nav .logo-area {
   cursor: pointer;
   transition: all 0.2s ease-out;
   text-decoration: none;
-  color: rgb(210, 210, 210);
+  color: #e1a04d;
 }
 .nav-link:hover {
   transform: scale(0.95);
   opacity: 0.9;
 }
 .nav-link:active {
-  transform: scale(1.05);
+  transform: scale(1);
   opacity: 1;
+}
+
+.logo,
+.icon {
+  color: #72c5a5;
+}
+
+.page-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 5vh auto;
+  color: #061817;
+  text-align: center;
+  border: 1px solid #061817;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 0 2px #061817;
+}
+
+.home-img {
+  width: 100%;
 }/*# sourceMappingURL=App.css.map */

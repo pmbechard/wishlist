@@ -2,6 +2,9 @@ import React from 'react';
 import './styles/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import HomePage from './components/HomePage';
+import AboutPage from './components/AboutPage';
+import ShopPage from './components/ShopPage';
 
 const App: React.FC = () => {
   return (
@@ -9,9 +12,9 @@ const App: React.FC = () => {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path='/' element={<h3>Home</h3>} />
-          <Route path='/about' element={<h3>About</h3>} />
-          <Route path='/shop' element={<h3>Shop</h3>} />
+          <Route path='/' element={<HomePage />} />
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='/shop' element={<ShopPage />} />
         </Routes>
       </BrowserRouter>
     </div>
