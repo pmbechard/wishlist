@@ -1,0 +1,11 @@
+.page-body {
+  @include fCenter(column);
+  width: 50%;
+  margin: 5vh auto;
+  color: $darkColour;
+  text-align: center;
+  border: 1px solid $darkColour;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 0 2px $darkColour;
+}

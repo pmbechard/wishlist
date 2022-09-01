@@ -1,0 +1,34 @@
+// FOOTER
+
+footer {
+  width: 100%;
+  background-color: $darkColour;
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+
+  a {
+    text-decoration: none;
+    transition: $transition;
+    color: #72c5a5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      @include hover;
+    }
+
+    &:active {
+      @include active;
+    }
+  }
+
+  small {
+    padding-right: 50px;
+    color: #e1a04d;
+  }
+}
