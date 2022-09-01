@@ -6,11 +6,12 @@ nav {
   padding: 0 10vw;
   background-color: $darkColour;
   color: $lightColour;
+  height: 10vh;
 
   .logo-area {
     width: 50%;
     @include fCenter();
-    gap: 5px;
+    gap: 20px;
     font-family: $headerFont;
     font-size: 24px;
   }

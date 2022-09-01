@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 nav {
   display: flex;
   justify-content: center;
@@ -7,6 +8,7 @@ nav {
   padding: 0 10vw;
   background-color: #061817;
   color: #e1a04d;
+  height: 10vh;
 }
 nav .logo-area {
   width: 50%;
@@ -14,8 +16,8 @@ nav .logo-area {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 5px;
-  font-family: "Times New Roman", Times, serif;
+  gap: 20px;
+  font-family: "VT323", monospace;
   font-size: 24px;
 }
 
@@ -56,6 +58,53 @@ nav .logo-area {
 .home-img {
   width: 100%;
   display: block;
+  height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.buttons {
+  position: fixed;
+  left: 5vw;
+  bottom: 50%;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5vh;
+}
+.buttons button {
+  padding: 20px;
+  color: #72c5a5;
+  background-color: #061817;
+  font-family: "VT323", monospace;
+  font-size: 18px;
+  border: 1px solid #72c5a5;
+  box-shadow: inset -5px -5px 0px #72c5a5;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.buttons button:hover {
+  box-shadow: inset 5px 5px 0px #e1a04d;
+  border-color: #e1a04d;
+  color: #e1a04d;
+}
+
+.img-credit {
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+}
+.img-credit a {
+  text-decoration: none;
+  color: white;
+  background-color: #061817;
+  padding: 3px 5px;
+  font-size: 12px;
+  opacity: 0.5;
 }
 
 .page-body {
@@ -81,6 +130,7 @@ footer {
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
+  height: 5vh;
 }
 footer a {
   text-decoration: none;

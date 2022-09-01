@@ -1,7 +1,9 @@
 $lightColour: #e1a04d;
 $accentColour: #72c5a5;
 $darkColour: #061817;
-$headerFont: 'Times New Roman', Times, serif;
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+$headerFont: 'VT323', monospace;
 $bodyFont: Arial, Helvetica, sans-serif;
 
 $transition: all 0.2s ease-out;

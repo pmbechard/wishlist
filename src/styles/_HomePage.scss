@@ -1,4 +1,50 @@
 .home-img {
   width: 100%;
   display: block;
+  height: 80vh;
+  object-fit: cover;
+}
+
+.buttons {
+  position: fixed;
+  left: 5vw;
+  bottom: 50%;
+  display: flex;
+  @include fCenter(column);
+  align-items: flex-start;
+  gap: 5vh;
+
+  button {
+    padding: 20px;
+    color: $accentColour;
+    background-color: $darkColour;
+    font-family: $headerFont;
+    font-size: 18px;
+    border: 1px solid $accentColour;
+    box-shadow: inset -5px -5px 0px $accentColour;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    opacity: 0.8;
+
+    &:hover {
+      box-shadow: inset 5px 5px 0px $lightColour;
+      border-color: $lightColour;
+      color: $lightColour;
+    }
+  }
+}
+
+.img-credit {
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+
+  a {
+    text-decoration: none;
+    color: white;
+    background-color: $darkColour;
+    padding: 3px 5px;
+    font-size: 12px;
+    opacity: 0.5;
+  }
 }
