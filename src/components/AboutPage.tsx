@@ -1,9 +1,15 @@
 import React from 'react';
 import aboutImg from '../img/about-img.jpg';
+import { motion } from 'framer-motion';
 
 const AboutPage: React.FC = () => {
   return (
-    <div>
+    <motion.div
+      key={new Date().getTime()}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 0.1 } }}
+      exit={{ opacity: 1 }}
+    >
       <img src={aboutImg} alt='about-img' className='home-img' />
       <div className='about-body'>
         <p>
@@ -26,7 +32,7 @@ const AboutPage: React.FC = () => {
           Photo by mali maeder
         </a>
       </p>
-    </div>
+    </motion.div>
   );
 };
 
