@@ -9,6 +9,8 @@ nav {
   background-color: #061817;
   color: #e1a04d;
   height: 10vh;
+  font-family: "VT323", monospace;
+  font-size: 20px;
 }
 nav .logo-area {
   width: 50%;
@@ -18,7 +20,7 @@ nav .logo-area {
   flex-direction: row;
   gap: 20px;
   font-family: "VT323", monospace;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .nav-links {
@@ -64,7 +66,7 @@ nav .logo-area {
 }
 
 .buttons {
-  position: fixed;
+  position: absolute;
   left: 5vw;
   bottom: 50%;
   display: flex;
@@ -94,7 +96,7 @@ nav .logo-area {
 }
 
 .img-credit {
-  position: fixed;
+  position: absolute;
   bottom: 80px;
   right: 10px;
 }
@@ -154,6 +156,34 @@ footer small {
   color: #e1a04d;
 }
 
+@media screen and (max-width: 850px) {
+  nav {
+    flex-direction: column;
+    height: 20vh;
+  }
+  nav .logo-area {
+    width: 100%;
+  }
+  nav .logo-area h1 {
+    margin: 0;
+    margin-top: 10px;
+    font-size: max(8vw, 36px);
+  }
+  nav .nav-links {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .img-credit {
+    bottom: 0;
+  }
+  .buttons {
+    bottom: 30%;
+  }
+  .buttons button {
+    padding: 10px;
+    box-shadow: inset -2px -2px 0px #72c5a5;
+  }
+}
 body {
   padding: 0;
   margin: 0;

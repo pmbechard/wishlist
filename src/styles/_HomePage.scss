@@ -6,7 +6,7 @@
 }
 
 .buttons {
-  position: fixed;
+  position: absolute;
   left: 5vw;
   bottom: 50%;
   display: flex;
@@ -35,7 +35,7 @@
 }
 
 .img-credit {
-  position: fixed;
+  position: absolute;
   bottom: 80px;
   right: 10px;
 

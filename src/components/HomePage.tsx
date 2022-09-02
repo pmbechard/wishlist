@@ -1,6 +1,6 @@
 import React from 'react';
 import mainImg from '../img/home-img.jpg';
-import { BsArrowRight } from 'react-icons/bs';
+import { BsFillArrowRightSquareFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
@@ -10,12 +10,13 @@ const HomePage: React.FC = () => {
       <div className='buttons'>
         <Link to='about/'>
           <button>
-            Learn more about our team <BsArrowRight />
+            <span>Learn more about our team</span>{' '}
+            <BsFillArrowRightSquareFill />
           </button>
         </Link>
         <Link to='shop/'>
           <button>
-            Check out the goods <BsArrowRight />
+            <span>Check out the goods</span> <BsFillArrowRightSquareFill />
           </button>
         </Link>
       </div>
