@@ -181,6 +181,7 @@ footer small {
   nav .nav-links {
     width: 100%;
     justify-content: space-around;
+    padding: 0;
   }
   .img-credit {
     bottom: 0;
