@@ -1,0 +1,82 @@
+[
+  {
+    "id": 0,
+    "name": "Drop ENTR Mechanical Keyboard",
+    "price": "79",
+    "img": "https://massdrop-s3.imgix.net/product-images/drop-entr-mechanical-keyboard/FP/0Y5zI5Q5SA6WU5vYtP4T_PC2.png?auto=format&fm=jpg&fit=fill&w=820&h=547&bg=f0f0f0&dpr=2&chromasub=444&q=35",
+    "purchaseAt": "https://drop.com/buy/drop-entr-mechanical-keyboard?defaultSelectionIds=969835%2C969837",
+    "tags": ["budget", "electronics", "programming"]
+  },
+  {
+    "id": 1,
+    "name": "Dell - U2720QM Ultrasharp 27\" 4K IPS LED - USB-C Monitor (Display, HDMI, USB) - Black",
+    "price": "554.99",
+    "img": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6404/6404051_sd.jpg",
+    "purchaseAt": "https://www.bestbuy.com/site/dell-u2720qm-ultrasharp-27-4k-ips-led-usb-c-monitor-display-hdmi-usb-black/6404051.p?skuId=6404051&ref=212&loc=1&gclid=Cj0KCQjw08aYBhDlARIsAA_gb0fpiFNdClRYOXjuAtwKU8oGQBDQiB7opNhAsbJgouho6UnjBipfX4YaAnV4EALw_wcB&gclsrc=aw.ds",
+    "tags": ["electronics", "programming"]
+  },
+  {
+    "id": 2,
+    "name": "Roland Aira Compact Voice Tweaker and Transformation Tool, with High-Quality Effects, and an Onboard Looper (E-4)",
+    "price": "199.99",
+    "img": "https://m.media-amazon.com/images/I/71EIEXzBN2L._AC_SX679_.jpg",
+    "purchaseAt": "https://www.amazon.com/Roland-Compact-Tweaker-Trransformation-High-Quality/dp/B0B1157KSJ/ref=sr_1_1?keywords=roland+e-4+voice+tweaker&qid=1662184870&sprefix=roland+e-4+%2Caps%2C316&sr=8-1",
+    "tags": ["budget", "electronics", "synthesizers"]
+  },
+  {
+    "id": 3,
+    "name": "Dirtywave M8 Tracker",
+    "price": "550",
+    "img": "https://cdn.shopify.com/s/files/1/0455/0485/6229/products/m8front_1100x.png?v=1635187892",
+    "purchaseAt": "https://dirtywave.com/products/m8-tracker",
+    "tags": ["electronics", "synthesizers"]
+  },
+  {
+    "id": 4,
+    "name": "LEGO Creator Expert James Bond Aston Martin DB5 10262 Building Kit (1295 Pieces)",
+    "price": "244.99",
+    "img": "https://m.media-amazon.com/images/I/81fdkBKAx0L._AC_SX679_.jpg",
+    "purchaseAt": "https://www.amazon.com/LEGO-Creator-Expert-Martin-Building/dp/B07FQ3KF2B/ref=sr_1_2?crid=1RJGZ2TAS2W7G&keywords=lego+bond&qid=1662185270&sprefix=lego+bond%2Caps%2C443&sr=8-2",
+    "tags": ["other"]
+  },
+  {
+    "id": 5,
+    "name": "Design Patterns: Elements of Reusable Object-Oriented Software 1st Edition",
+    "price": "34.95",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/51szD9HC9pL._SX395_BO1,204,203,200_.jpg",
+    "purchaseAt": "https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref=sr_1_1?crid=KN1G98PAW3Q&keywords=design+patterns&qid=1662185472&sprefix=design+patterns%2Caps%2C330&sr=8-1",
+    "tags": ["budget", "books"]
+  },
+  {
+    "id": 6,
+    "name": "Cracking the Coding Interview: 189 Programming Questions and Solutions 6th Edition",
+    "price": "25.67",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/41oYsXjLvZL._SX348_BO1,204,203,200_.jpg",
+    "purchaseAt": "https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=sr_1_1?keywords=crack+the+coding+interview&qid=1662185565&sprefix=crack+the+codin%2Caps%2C332&sr=8-1",
+    "tags": ["budget", "books"]
+  },
+  {
+    "id": 7,
+    "name": "EZGoal Hockey Folding Pro Goal, 2-Inch, Red/White - On Goal Net,67708",
+    "price": "128.99",
+    "img": "https://m.media-amazon.com/images/I/A1kFRldX8CL._AC_SX679_.jpg",
+    "purchaseAt": "https://www.amazon.com/EZGoal-Hockey-Folding-2-Inch-White/dp/B0093U9RUC/ref=sr_1_9?crid=1UH3SM8C3XVLR&keywords=bauer+vapor+hyperlite&qid=1662185762&sprefix=bauer+vapor+hyperlite+%2Caps%2C316&sr=8-9",
+    "tags": ["budget", "hockey"]
+  },
+  {
+    "id": 8,
+    "name": "IDS Pro-Shot Puck - Official Roller Hockey Puck Of AAU USA & USA Roller Sports",
+    "price": "9.99",
+    "img": "https://m.media-amazon.com/images/I/41R5-ZcGaRL._AC_.jpg",
+    "purchaseAt": "https://www.amazon.com/Ideal-Design-Sports-Inline-Hockey/dp/B0092M20ZK/ref=sr_1_5?crid=1ZFC46VWB89ZF&keywords=inline+puck&qid=1662185844&sprefix=inline+p%2Caps%2C597&sr=8-5",
+    "tags": ["budget", "hockey"]
+  },
+  {
+    "id": 9,
+    "name": "Bauer SH100 Street Hockey Stick",
+    "price": "10.19",
+    "img": "https://i1.adis.ws/i/bauer/692161_01/SH100StreetHockeyStick?$large$",
+    "purchaseAt": "https://www.bauer.com/en-US/street-roller-hockey/street-hockey-sticks/sh100-street-hockey-stick-692161.html?cgid=Street%20Hockey%20Sticks#start=1",
+    "tags": ["budget", "hockey"]
+  }
+]
