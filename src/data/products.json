@@ -78,5 +78,21 @@
     "img": "https://i1.adis.ws/i/bauer/692161_01/SH100StreetHockeyStick?$large$",
     "purchaseAt": "https://www.bauer.com/en-US/street-roller-hockey/street-hockey-sticks/sh100-street-hockey-stick-692161.html?cgid=Street%20Hockey%20Sticks#start=1",
     "tags": ["budget", "hockey"]
+  },
+  {
+    "id": 10,
+    "name": "Carhartt Men's Yukon Extremes Loose Fit Insulated Biberall",
+    "price": "199.99",
+    "img": "https://m.media-amazon.com/images/I/61tZ0606hKL._AC_UX679_.jpg",
+    "purchaseAt": "https://www.amazon.com/Carhartt-Yukon-Extremes-Insulated-Biberall/dp/B08KG64JGG",
+    "tags": ["clothes"]
+  },
+  {
+    "id": 11,
+    "name": "Louis Vuitton Ribbed Damier Crewneck",
+    "price": "895",
+    "img": "https://uk.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-ribbed-damier-crewneck-ready-to-wear--HLN77WZLL87D_PM2_Front%20view.png?wid=2048&hei=2048",
+    "purchaseAt": "https://uk.louisvuitton.com/eng-gb/products/ribbed-damier-crewneck-nvprod3030066v/1A9702",
+    "tags": ["clothes"]
   }
 ]
