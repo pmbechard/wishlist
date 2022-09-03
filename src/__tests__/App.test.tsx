@@ -42,5 +42,18 @@ describe('Browser Router navigation', () => {
     const shopContainer = screen.getByTestId('shop-container');
     expect(shopContainer).toBeInTheDocument();
   });
-  it('renders all pages throughout multiple switches', () => {});
+  it('renders all pages throughout multiple switches', () => {
+    const [aboutBtn, shopBtn] = screen.getAllByRole('button');
+    userEvent.click(aboutBtn);
+    const aboutParagraph = screen.getByTestId('about-paragraph');
+    expect(aboutParagraph).toBeInTheDocument();
+    const shopLink = screen.getByTestId('shop-link');
+    userEvent.click(shopLink);
+    const shopContainer = screen.getByTestId('shop-container');
+    expect(shopContainer).toBeInTheDocument();
+    const homeLink = screen.getByTestId('home-link');
+    userEvent.click(homeLink);
+    expect(aboutBtn.textContent).toMatch(/learn more about our team/i);
+    expect(shopBtn.textContent).toMatch(/check out the goods/i);
+  });
 });

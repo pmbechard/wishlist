@@ -8,6 +8,7 @@ const Footer: React.FC = () => {
         className='gh-link'
         href='https://www.github.com/pmbechard'
         target='_blank'
+        rel='noreferrer'
       >
         <BsGithub />
         <small>Peyton Bechard &copy; 2022</small>
