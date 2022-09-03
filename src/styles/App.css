@@ -85,7 +85,8 @@ nav .logo-area {
   font-size: 18px;
   border: 1px solid #72c5a5;
   box-shadow: inset -5px -5px 0px #72c5a5;
-  transition: all 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
   cursor: pointer;
   opacity: 0.8;
 }
@@ -127,7 +128,7 @@ nav .logo-area {
   opacity: 0.8;
   max-height: 70vh;
   overflow: scroll;
-  transition: all 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
 }
 .about-body:hover {
   box-shadow: inset 5px 5px 0px #e1a04d;

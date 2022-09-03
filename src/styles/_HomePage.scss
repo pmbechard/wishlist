@@ -22,7 +22,8 @@
     font-size: 18px;
     border: 1px solid $accentColour;
     box-shadow: inset -5px -5px 0px $accentColour;
-    transition: all 0.3s ease-in-out;
+    transition: border 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
     cursor: pointer;
     opacity: 0.8;
 

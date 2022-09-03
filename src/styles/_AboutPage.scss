@@ -16,7 +16,7 @@
   opacity: 0.8;
   max-height: 70vh;
   overflow: scroll;
-  transition: all 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
 
   &:hover {
     box-shadow: inset 5px 5px 0px $lightColour;
