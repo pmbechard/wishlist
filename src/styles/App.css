@@ -136,6 +136,20 @@ nav .logo-area {
 
 .shop-container {
   height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.product-card {
+  color: #e1a04d;
+  height: 400px;
+  width: 300px;
+}
+.product-card img {
+  max-height: 200px;
+  max-width: 300px;
 }
 
 footer {
