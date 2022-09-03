@@ -11,7 +11,7 @@ const AboutPage: React.FC = () => {
       exit={{ opacity: 1 }}
     >
       <img src={aboutImg} alt='about-img' className='home-img' />
-      <div className='about-body'>
+      <div className='about-body' data-testid='about-paragraph'>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. In nesciunt
           explicabo iure cumque perferendis quos quidem voluptatem est soluta

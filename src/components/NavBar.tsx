@@ -12,17 +12,17 @@ const NavBar: React.FC = () => {
       </div>
       <ul className='nav-links'>
         <Link to='/' className='nav-link'>
-          <li className='nav-link'>
+          <li className='nav-link' data-testid='home-link'>
             <AiFillHome className='icon' /> Home
           </li>
         </Link>
-        <Link to='about' className='nav-link'>
+        <Link to='about' className='nav-link' data-testid='about-link'>
           <li className='nav-link'>
             <BsFillPersonFill className='icon' />
             About Us
           </li>
         </Link>
-        <Link to='shop' className='nav-link'>
+        <Link to='shop' className='nav-link' data-testid='shop-link'>
           <li className='nav-link'>
             <AiFillShopping className='icon' />
             Shop

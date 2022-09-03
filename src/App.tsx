@@ -13,7 +13,7 @@ const App: React.FC = () => {
     <div>
       <BrowserRouter>
         <NavBar />
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence mode='wait'>
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/about' element={<AboutPage />} />
