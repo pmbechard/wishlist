@@ -10,7 +10,9 @@ const ShopPage: React.FC = () => {
       exit={{ opacity: 1 }}
       className='homepage-container'
     >
-      <div data-testid='shop-container'>Shop</div>
+      <div data-testid='shop-container' className='shop-container'>
+        Shop
+      </div>
     </motion.div>
   );
 };

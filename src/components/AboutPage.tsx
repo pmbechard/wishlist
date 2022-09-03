@@ -9,6 +9,7 @@ const AboutPage: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.1 } }}
       exit={{ opacity: 1 }}
+      className='about-container'
     >
       <img src={aboutImg} alt='about-img' className='home-img' />
       <div className='about-body' data-testid='about-paragraph'>

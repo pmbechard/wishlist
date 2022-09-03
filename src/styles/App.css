@@ -134,6 +134,10 @@ nav .logo-area {
   box-shadow: inset 5px 5px 0px #e1a04d;
 }
 
+.shop-container {
+  height: 80vh;
+}
+
 footer {
   width: 100%;
   background-color: #061817;
