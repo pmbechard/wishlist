@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Product from './ProductInterface';
 import products from './../data/products.json';
-
-interface Product {
-  id: number;
-  name: string;
-  price: string;
-  img: string;
-  purchaseAt: string;
-  tags: string[];
-}
+import ProductCard from './ProductCard';
 
 const ShopPage: React.FC = () => {
   const [getProducts, setProducts] = useState<Product[]>([]);
-  const [productsAreLoading, setProductsAreLoading] = useState<boolean>(false);
+  // for future use if/when products are fetched from API call
+  const [, setProductsAreLoading] = useState<boolean>(false);
 
   useEffect((): void => {
     const loadProducts = async () => {
@@ -24,26 +18,20 @@ const ShopPage: React.FC = () => {
     loadProducts();
   }, []);
 
-  console.log(getProducts);
-
   return (
     <motion.div
       key={new Date().getTime()}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.1 } }}
       exit={{ opacity: 1 }}
-      className='homepage-container'
+      data-testid='shop-container'
+      className='shop-container'
     >
-      <div data-testid='shop-container' className='shop-container'>
-        {products.map((product) => {
-          return (
-            <div key={product.id} className='product-card'>
-              <div>{product.name}</div>
-              <img src={product.img} alt={product.name} />
-            </div>
-          );
-        })}
-      </div>
+      {/* TODO: ADD FLOATING SHOPPING CART MODAL OPTION */}
+      {/* TODO: ADD SORT BY AND FILTER OPTIONS */}
+      {products.map((product) => {
+        return <ProductCard key={product.id} product={product} />;
+      })}
     </motion.div>
   );
 };

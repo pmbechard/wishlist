@@ -1,0 +1,37 @@
+.product-card {
+  color: $lightColour;
+  height: 300px;
+  box-shadow: inset -10px -10px 0px $accentColour;
+  border: 1px solid $lightColour;
+  padding: 20px;
+  background-color: #eee;
+  cursor: pointer;
+  transition: $transition;
+
+  h3 {
+    margin: 0;
+    height: 50px;
+  }
+
+  .product-img-container {
+    @include fCenter();
+    padding: 10px;
+    height: 200px;
+
+    img {
+      max-height: 200px;
+      max-width: 200px;
+    }
+  }
+
+  .product-footer {
+    @include fCenter();
+    justify-content: space-between;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    border: 1px solid $accentColour;
+    box-shadow: inset -10px -10px 0px $lightColour;
+  }
+}

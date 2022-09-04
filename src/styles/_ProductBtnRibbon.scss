@@ -1,0 +1,14 @@
+.btn-ribbon {
+  @include fCenter();
+  gap: 15px;
+
+  .btn-ribbon-icon {
+    font-size: 18px;
+    transition: $transition;
+
+    &:hover {
+      transform: scale(1.1);
+      color: $accentColour;
+    }
+  }
+}

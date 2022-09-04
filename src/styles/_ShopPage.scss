@@ -1,15 +1,11 @@
 .shop-container {
   height: 80vh;
-  @include fCenter();
-}
+  padding: 10vh;
 
-.product-card {
-  color: $lightColour;
-  height: 400px;
-  width: 300px;
+  overflow: scroll;
 
-  img {
-    max-height: 200px;
-    max-width: 300px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 40px;
 }

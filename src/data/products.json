@@ -9,7 +9,7 @@
   },
   {
     "id": 1,
-    "name": "Dell - U2720QM Ultrasharp 27\" 4K IPS LED - USB-C Monitor (Display, HDMI, USB) - Black",
+    "name": "Dell - U2720QM Ultrasharp 27\" 4K IPS LED - USB-C Monitor",
     "price": "554.99",
     "img": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6404/6404051_sd.jpg",
     "purchaseAt": "https://www.bestbuy.com/site/dell-u2720qm-ultrasharp-27-4k-ips-led-usb-c-monitor-display-hdmi-usb-black/6404051.p?skuId=6404051&ref=212&loc=1&gclid=Cj0KCQjw08aYBhDlARIsAA_gb0fpiFNdClRYOXjuAtwKU8oGQBDQiB7opNhAsbJgouho6UnjBipfX4YaAnV4EALw_wcB&gclsrc=aw.ds",
@@ -17,7 +17,7 @@
   },
   {
     "id": 2,
-    "name": "Roland Aira Compact Voice Tweaker and Transformation Tool, with High-Quality Effects, and an Onboard Looper (E-4)",
+    "name": "Roland Aira Compact Voice Tweaker (E-4)",
     "price": "199.99",
     "img": "https://m.media-amazon.com/images/I/71EIEXzBN2L._AC_SX679_.jpg",
     "purchaseAt": "https://www.amazon.com/Roland-Compact-Tweaker-Trransformation-High-Quality/dp/B0B1157KSJ/ref=sr_1_1?keywords=roland+e-4+voice+tweaker&qid=1662184870&sprefix=roland+e-4+%2Caps%2C316&sr=8-1",
@@ -33,7 +33,7 @@
   },
   {
     "id": 4,
-    "name": "LEGO Creator Expert James Bond Aston Martin DB5 10262 Building Kit (1295 Pieces)",
+    "name": "LEGO James Bond Aston Martin DB5 10262 Building Kit",
     "price": "244.99",
     "img": "https://m.media-amazon.com/images/I/81fdkBKAx0L._AC_SX679_.jpg",
     "purchaseAt": "https://www.amazon.com/LEGO-Creator-Expert-Martin-Building/dp/B07FQ3KF2B/ref=sr_1_2?crid=1RJGZ2TAS2W7G&keywords=lego+bond&qid=1662185270&sprefix=lego+bond%2Caps%2C443&sr=8-2",
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "name": "Design Patterns: Elements of Reusable Object-Oriented Software 1st Edition",
+    "name": "Design Patterns, 1st Edition",
     "price": "34.95",
     "img": "https://images-na.ssl-images-amazon.com/images/I/51szD9HC9pL._SX395_BO1,204,203,200_.jpg",
     "purchaseAt": "https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref=sr_1_1?crid=KN1G98PAW3Q&keywords=design+patterns&qid=1662185472&sprefix=design+patterns%2Caps%2C330&sr=8-1",
@@ -49,7 +49,7 @@
   },
   {
     "id": 6,
-    "name": "Cracking the Coding Interview: 189 Programming Questions and Solutions 6th Edition",
+    "name": "Cracking the Coding Interview, 6th Edition",
     "price": "25.67",
     "img": "https://images-na.ssl-images-amazon.com/images/I/41oYsXjLvZL._SX348_BO1,204,203,200_.jpg",
     "purchaseAt": "https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=sr_1_1?keywords=crack+the+coding+interview&qid=1662185565&sprefix=crack+the+codin%2Caps%2C332&sr=8-1",
@@ -57,7 +57,7 @@
   },
   {
     "id": 7,
-    "name": "EZGoal Hockey Folding Pro Goal, 2-Inch, Red/White - On Goal Net,67708",
+    "name": "EZGoal Hockey Folding Pro Goal",
     "price": "128.99",
     "img": "https://m.media-amazon.com/images/I/A1kFRldX8CL._AC_SX679_.jpg",
     "purchaseAt": "https://www.amazon.com/EZGoal-Hockey-Folding-2-Inch-White/dp/B0093U9RUC/ref=sr_1_9?crid=1UH3SM8C3XVLR&keywords=bauer+vapor+hyperlite&qid=1662185762&sprefix=bauer+vapor+hyperlite+%2Caps%2C316&sr=8-9",
@@ -65,7 +65,7 @@
   },
   {
     "id": 8,
-    "name": "IDS Pro-Shot Puck - Official Roller Hockey Puck Of AAU USA & USA Roller Sports",
+    "name": "IDS Pro-Shot Puck",
     "price": "9.99",
     "img": "https://m.media-amazon.com/images/I/41R5-ZcGaRL._AC_.jpg",
     "purchaseAt": "https://www.amazon.com/Ideal-Design-Sports-Inline-Hockey/dp/B0092M20ZK/ref=sr_1_5?crid=1ZFC46VWB89ZF&keywords=inline+puck&qid=1662185844&sprefix=inline+p%2Caps%2C597&sr=8-5",
