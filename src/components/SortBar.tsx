@@ -1,28 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Product from './ProductInterface';
 
-const SortBar: React.FC = () => {
+interface Props {
+  products: Product[];
+}
+
+const SortBar: React.FC<Props> = ({ products }) => {
+  const [getTags, setTags] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fetchTags = (): string[] => {
+      const tags: string[] = [];
+      products.map((product) => {
+        for (let i = 0; i < product.tags.length; i++) {
+          if (!tags.includes(product.tags[i])) tags.push(product.tags[i]);
+        }
+      });
+      return tags;
+    };
+
+    setTags(fetchTags());
+  }, []);
+
   return (
     <div className='sort-bar-container'>
-      <select className='sort-select' defaultValue='sort-by'>
-        <option disabled value='sort-by'>
-          Sort By
-        </option>
-        <option value='name-az'>Name (A-Z)</option>
-        <option value='name-za'>Name (Z-A)</option>
-        <option value='price-lh'>Price (Low-High)</option>
-        <option value='name-hl'>Price (High-Low)</option>
-      </select>
+      <div className='sort-select-container'>
+        <label htmlFor='sort-by'>Sort by:</label>
+        <select id='sort-by' className='sort-select' defaultValue='name-az'>
+          <option value='name-az'>Name (A-Z)</option>
+          <option value='name-za'>Name (Z-A)</option>
+          <option value='price-lh'>Price (Low-High)</option>
+          <option value='name-hl'>Price (High-Low)</option>
+        </select>
+      </div>
 
-      {/* TODO: make these dynamic based on products list */}
       <div className='tags-container'>
-        <div className='tag'>budget</div>
-        <div className='tag'>electronics</div>
-        <div className='tag'>programming</div>
-        <div className='tag'>synthesizers</div>
-        <div className='tag'>other</div>
-        <div className='tag'>books</div>
-        <div className='tag'>hockey</div>
-        <div className='tag'>clothes</div>
+        {getTags.map((tag) => {
+          return (
+            <div key={tag} className='tag'>
+              {tag}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

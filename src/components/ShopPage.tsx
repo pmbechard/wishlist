@@ -30,7 +30,7 @@ const ShopPage: React.FC = () => {
     >
       {/* TODO: ADD FLOATING SHOPPING CART MODAL OPTION */}
       {/* TODO: ADD SORT BY AND FILTER OPTIONS */}
-      <SortBar />
+      <SortBar products={products} />
       <div className='products-area'>
         {products.map((product) => {
           return <ProductCard key={product.id} product={product} />;

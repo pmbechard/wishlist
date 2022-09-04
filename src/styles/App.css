@@ -175,6 +175,7 @@ nav .logo-area {
   margin: 10px 10px;
   background-color: #72c5a5;
   cursor: pointer;
+  opacity: 0.6;
 }
 
 .product-card {
