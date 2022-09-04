@@ -15,7 +15,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
       </div>
       <div className='product-footer'>
         <h4>{product.price}USD</h4>
-        <ProductBtnRibbon productID={product.id} />
+        <ProductBtnRibbon product={product} />
       </div>
     </div>
   );
