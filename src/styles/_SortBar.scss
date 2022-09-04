@@ -1,0 +1,27 @@
+.sort-bar-container {
+  color: $whiteColour;
+  height: 10vh;
+  @include fCenter();
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .tags-container {
+    @include fCenter();
+    flex-wrap: wrap;
+
+    .sort-select {
+      padding: 5px 10px;
+      border: 8px;
+      background-color: $accentColour;
+    }
+
+    .tag {
+      border: 1px solid $whiteColour;
+      border-radius: 8px;
+      padding: 0 10px;
+      margin: 10px 10px;
+      background-color: $accentColour;
+      cursor: pointer;
+    }
+  }
+}

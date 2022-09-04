@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Product from './ProductInterface';
 import products from './../data/products.json';
 import ProductCard from './ProductCard';
+import SortBar from './SortBar';
 
 const ShopPage: React.FC = () => {
   const [getProducts, setProducts] = useState<Product[]>([]);
@@ -29,9 +30,12 @@ const ShopPage: React.FC = () => {
     >
       {/* TODO: ADD FLOATING SHOPPING CART MODAL OPTION */}
       {/* TODO: ADD SORT BY AND FILTER OPTIONS */}
-      {products.map((product) => {
-        return <ProductCard key={product.id} product={product} />;
-      })}
+      <SortBar />
+      <div className='products-area'>
+        {products.map((product) => {
+          return <ProductCard key={product.id} product={product} />;
+        })}
+      </div>
     </motion.div>
   );
 };

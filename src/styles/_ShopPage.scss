@@ -1,11 +1,12 @@
 .shop-container {
   height: 80vh;
-  padding: 10vh;
-
+  padding: 40px 80px;
   overflow: scroll;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-content: center;
-  gap: 40px;
+  .products-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 40px;
+  }
 }

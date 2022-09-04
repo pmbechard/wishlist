@@ -136,12 +136,45 @@ nav .logo-area {
 
 .shop-container {
   height: 80vh;
-  padding: 10vh;
+  padding: 40px 80px;
   overflow: scroll;
+}
+.shop-container .products-area {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
   gap: 40px;
+}
+
+.sort-bar-container {
+  color: #eee;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.sort-bar-container .tags-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sort-bar-container .tags-container .sort-select {
+  padding: 5px 10px;
+  border: 8px;
+  background-color: #72c5a5;
+}
+.sort-bar-container .tags-container .tag {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 10px 10px;
+  background-color: #72c5a5;
+  cursor: pointer;
 }
 
 .product-card {
