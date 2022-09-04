@@ -185,7 +185,6 @@ nav .logo-area {
   border: 1px solid #e1a04d;
   padding: 20px;
   background-color: #eee;
-  cursor: pointer;
   transition: all 0.2s ease-out;
 }
 .product-card h3 {
@@ -227,6 +226,7 @@ nav .logo-area {
 .btn-ribbon .btn-ribbon-icon {
   font-size: 18px;
   transition: all 0.2s ease-out;
+  cursor: pointer;
 }
 .btn-ribbon .btn-ribbon-icon:hover {
   transform: scale(1.1);

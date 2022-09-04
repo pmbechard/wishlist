@@ -1,24 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import Product from './ProductInterface';
-import products from './../data/products.json';
-import ProductCard from './ProductCard';
 import SortBar from './SortBar';
+import ProductsArea from './ProductsArea';
 
-const ShopPage: React.FC = () => {
-  const [getProducts, setProducts] = useState<Product[]>([]);
-  // for future use if/when products are fetched from API call
-  const [, setProductsAreLoading] = useState<boolean>(false);
+interface Props {
+  getProducts: Product[];
+  getSortBy: string;
+  setSortBy: React.Dispatch<React.SetStateAction<string>>;
+}
 
-  useEffect((): void => {
-    const loadProducts = async () => {
-      setProductsAreLoading(true);
-      setProducts(products);
-      setProductsAreLoading(false);
-    };
-    loadProducts();
-  }, []);
-
+const ShopPage: React.FC<Props> = ({ getProducts, getSortBy, setSortBy }) => {
   return (
     <motion.div
       key={new Date().getTime()}
@@ -29,13 +21,12 @@ const ShopPage: React.FC = () => {
       className='shop-container'
     >
       {/* TODO: ADD FLOATING SHOPPING CART MODAL OPTION */}
-      {/* TODO: ADD SORT BY AND FILTER OPTIONS */}
-      <SortBar products={products} />
-      <div className='products-area'>
-        {products.map((product) => {
-          return <ProductCard key={product.id} product={product} />;
-        })}
-      </div>
+      <SortBar
+        products={getProducts}
+        getSortBy={getSortBy}
+        setSortBy={setSortBy}
+      />
+      <ProductsArea products={getProducts} />
     </motion.div>
   );
 };

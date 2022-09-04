@@ -5,6 +5,7 @@
   .btn-ribbon-icon {
     font-size: 18px;
     transition: $transition;
+    cursor: pointer;
 
     &:hover {
       transform: scale(1.1);
