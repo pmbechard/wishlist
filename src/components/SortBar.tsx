@@ -5,26 +5,39 @@ interface Props {
   products: Product[];
   getSortBy: string;
   setSortBy: React.Dispatch<React.SetStateAction<string>>;
+  getActiveTags: string[];
+  setActiveTags: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-const SortBar: React.FC<Props> = ({ products, getSortBy, setSortBy }) => {
+const SortBar: React.FC<Props> = ({
+  products,
+  getSortBy,
+  setSortBy,
+  getActiveTags,
+  setActiveTags,
+}) => {
   const [getTags, setTags] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchTags = (): string[] => {
       const tags: string[] = [];
-
       // eslint-disable-next-line array-callback-return
       products.map((product) => {
-        for (let i = 0; i < product.tags.length; i++) {
+        for (let i = 0; i < product.tags.length; i++)
           if (!tags.includes(product.tags[i])) tags.push(product.tags[i]);
-        }
       });
       return tags;
     };
     setTags(fetchTags());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const toggleTag = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (e.currentTarget.classList.contains('disabled-tag')) {
+      e.currentTarget.classList.remove('disabled-tag');
+    } else {
+      e.currentTarget.classList.add('disabled-tag');
+    }
+  };
 
   return (
     <div className='sort-bar-container'>
@@ -46,7 +59,7 @@ const SortBar: React.FC<Props> = ({ products, getSortBy, setSortBy }) => {
       <div className='tags-container'>
         {getTags.map((tag) => {
           return (
-            <div key={tag} className='tag'>
+            <div key={tag} className='tag' onClick={(e) => toggleTag(e)}>
               {tag}
             </div>
           );

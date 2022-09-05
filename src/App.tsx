@@ -14,9 +14,10 @@ const App: React.FC = () => {
   const productsList: Product[] = structuredClone(products);
   const [getProducts, setProducts] = useState<Product[]>([]);
   const [getSortBy, setSortBy] = useState<string>('name-az');
+  const [getActiveTags, setActiveTags] = useState<string[]>([]);
 
   useEffect(() => {
-    const getSortedProducts = () => {
+    const getSortedProducts = (): Product[] => {
       if (getSortBy === 'name-az') {
         return productsList.sort((a: Product, b: Product) => {
           return a.name >= b.name ? 1 : -1;
@@ -54,6 +55,8 @@ const App: React.FC = () => {
                   getProducts={getProducts}
                   getSortBy={getSortBy}
                   setSortBy={setSortBy}
+                  getActiveTags={getActiveTags}
+                  setActiveTags={setActiveTags}
                 />
               }
             />

@@ -8,9 +8,17 @@ interface Props {
   getProducts: Product[];
   getSortBy: string;
   setSortBy: React.Dispatch<React.SetStateAction<string>>;
+  getActiveTags: string[];
+  setActiveTags: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-const ShopPage: React.FC<Props> = ({ getProducts, getSortBy, setSortBy }) => {
+const ShopPage: React.FC<Props> = ({
+  getProducts,
+  getSortBy,
+  setSortBy,
+  getActiveTags,
+  setActiveTags,
+}) => {
   return (
     <motion.div
       key={new Date().getTime()}
@@ -25,6 +33,8 @@ const ShopPage: React.FC<Props> = ({ getProducts, getSortBy, setSortBy }) => {
         products={getProducts}
         getSortBy={getSortBy}
         setSortBy={setSortBy}
+        getActiveTags={getActiveTags}
+        setActiveTags={setActiveTags}
       />
       <ProductsArea products={getProducts} />
     </motion.div>

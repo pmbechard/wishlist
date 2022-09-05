@@ -175,6 +175,8 @@ nav .logo-area {
   margin: 10px 10px;
   background-color: #72c5a5;
   cursor: pointer;
+}
+.sort-bar-container .tags-container .disabled-tag {
   opacity: 0.6;
 }
 
