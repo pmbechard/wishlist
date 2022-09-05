@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
@@ -11,46 +11,31 @@ import Product from './components/ProductInterface';
 import products from './data/products.json';
 
 const App: React.FC = () => {
-  const [getProducts, setProducts] = useState<Product[]>(products);
-  const [getSortBy, setSortBy] = useState<string>('');
+  const productsList: Product[] = structuredClone(products);
+  const [getProducts, setProducts] = useState<Product[]>([]);
+  const [getSortBy, setSortBy] = useState<string>('name-az');
 
   useEffect(() => {
-    if (getSortBy === 'name-az') {
-      setProducts(
-        getProducts.sort((a: Product, b: Product) => {
+    const getSortedProducts = () => {
+      if (getSortBy === 'name-az') {
+        return productsList.sort((a: Product, b: Product) => {
           return a.name >= b.name ? 1 : -1;
-        })
-      );
-    } else if (getSortBy === 'name-za') {
-      setProducts(
-        getProducts.sort((a: Product, b: Product) => {
+        });
+      } else if (getSortBy === 'name-za') {
+        return productsList.sort((a: Product, b: Product) => {
           return a.name >= b.name ? -1 : 1;
-        })
-      );
-    } else if (getSortBy === 'price-lh') {
-      setProducts(
-        getProducts.sort((a: Product, b: Product) => {
-          return a.name >= b.name ? 1 : -1;
-        })
-      );
-      setProducts(
-        getProducts.sort((a: Product, b: Product) => {
+        });
+      } else if (getSortBy === 'price-lh') {
+        return productsList.sort((a: Product, b: Product) => {
           return parseInt(a.price) >= parseInt(b.price) ? 1 : -1;
-        })
-      );
-    } else if (getSortBy === 'price-hl') {
-      setProducts(
-        getProducts.sort((a: Product, b: Product) => {
-          return a.name >= b.name ? 1 : -1;
-        })
-      );
-      setProducts(
-        getProducts.sort((a: Product, b: Product) => {
+        });
+      } else {
+        return productsList.sort((a: Product, b: Product) => {
           return parseInt(a.price) <= parseInt(b.price) ? 1 : -1;
-        })
-      );
-    }
-    console.log(getProducts);
+        });
+      }
+    };
+    setProducts(getSortedProducts());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getSortBy]);
 
