@@ -36,11 +36,11 @@ const App: React.FC = () => {
     const getSortedProducts = (): Product[] => {
       if (getSortBy === 'name-az') {
         return productsList.sort((a: Product, b: Product) => {
-          return a.name >= b.name ? 1 : -1;
+          return a.name.toLowerCase() >= b.name.toLowerCase() ? 1 : -1;
         });
       } else if (getSortBy === 'name-za') {
         return productsList.sort((a: Product, b: Product) => {
-          return a.name >= b.name ? -1 : 1;
+          return a.name.toLowerCase() >= b.name.toLowerCase() ? -1 : 1;
         });
       } else if (getSortBy === 'price-lh') {
         return productsList.sort((a: Product, b: Product) => {
