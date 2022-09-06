@@ -5,9 +5,9 @@ import { AnimatePresence } from 'framer-motion';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
-import ShopPage from './components/ShopPage';
+import ShopPage from './components/Shop/ShopPage';
 import Footer from './components/Footer';
-import Product from './components/ProductInterface';
+import Product from './components/Shop/ProductInterface';
 import products from './data/products.json';
 
 const App: React.FC = () => {
@@ -17,8 +17,6 @@ const App: React.FC = () => {
   const [getAllTags, setAllTags] = useState<string[]>([]);
   const [getActiveTags, setActiveTags] = useState<string[]>([]);
   const [getShopFade, setShopFade] = useState<boolean>(true);
-
-  // FIXME: products not appearing alphabetically on init load
 
   useEffect(() => {
     const fetchTags = (): string[] => {
@@ -61,6 +59,7 @@ const App: React.FC = () => {
       }
     };
     setProducts(
+      // eslint-disable-next-line array-callback-return
       getSortedProducts().filter((product) => {
         for (let i = 0; i < product.tags.length; i++) {
           if (getActiveTags.includes(product.tags[i])) return product;
