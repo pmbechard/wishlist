@@ -60,19 +60,15 @@ const App: React.FC = () => {
         });
       }
     };
-    setProducts(getSortedProducts());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [getSortBy]);
-
-  useEffect(() => {
     setProducts(
-      productsList.filter((product) => {
+      getSortedProducts().filter((product) => {
         for (let i = 0; i < product.tags.length; i++) {
           if (getActiveTags.includes(product.tags[i])) return product;
         }
       })
     );
-  }, [getActiveTags]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [getSortBy, getActiveTags]);
 
   const handleTagClick = (e: HTMLDivElement): void => {
     const tagName = e.textContent || '';
