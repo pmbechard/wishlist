@@ -18,6 +18,8 @@ const App: React.FC = () => {
   const [getActiveTags, setActiveTags] = useState<string[]>([]);
   const [getShopFade, setShopFade] = useState<boolean>(true);
 
+  // FIXME: products not appearing alphabetically on init load
+
   useEffect(() => {
     const fetchTags = (): string[] => {
       const tags: string[] = [];
@@ -61,6 +63,16 @@ const App: React.FC = () => {
     setProducts(getSortedProducts());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getSortBy]);
+
+  useEffect(() => {
+    setProducts(
+      productsList.filter((product) => {
+        for (let i = 0; i < product.tags.length; i++) {
+          if (getActiveTags.includes(product.tags[i])) return product;
+        }
+      })
+    );
+  }, [getActiveTags]);
 
   const handleTagClick = (e: HTMLDivElement): void => {
     const tagName = e.textContent || '';
