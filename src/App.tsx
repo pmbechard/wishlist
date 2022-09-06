@@ -24,9 +24,10 @@ const App: React.FC = () => {
       // eslint-disable-next-line array-callback-return
       products.map((product) => {
         for (let i = 0; i < product.tags.length; i++)
-          if (!tags.includes(product.tags[i])) tags.push(product.tags[i]);
+          if (!tags.includes(product.tags[i]))
+            tags.push(product.tags[i].toLowerCase());
       });
-      return tags;
+      return tags.sort();
     };
     const currentTags = fetchTags();
     setAllTags(currentTags);
