@@ -8,16 +8,14 @@ interface Props {
   getProducts: Product[];
   getSortBy: string;
   setSortBy: React.Dispatch<React.SetStateAction<string>>;
-  getActiveTags: string[];
-  setActiveTags: React.Dispatch<React.SetStateAction<string[]>>;
+  handleTagClick: (e: HTMLDivElement) => void;
 }
 
 const ShopPage: React.FC<Props> = ({
   getProducts,
   getSortBy,
   setSortBy,
-  getActiveTags,
-  setActiveTags,
+  handleTagClick,
 }) => {
   return (
     <motion.div
@@ -33,8 +31,7 @@ const ShopPage: React.FC<Props> = ({
         products={getProducts}
         getSortBy={getSortBy}
         setSortBy={setSortBy}
-        getActiveTags={getActiveTags}
-        setActiveTags={setActiveTags}
+        handleTagClick={handleTagClick}
       />
       <ProductsArea products={getProducts} />
     </motion.div>

@@ -40,6 +40,10 @@ const App: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getSortBy]);
 
+  const handleTagClick = (e: HTMLDivElement): void => {
+    console.log(e);
+  };
+
   return (
     <div>
       <BrowserRouter>
@@ -55,8 +59,7 @@ const App: React.FC = () => {
                   getProducts={getProducts}
                   getSortBy={getSortBy}
                   setSortBy={setSortBy}
-                  getActiveTags={getActiveTags}
-                  setActiveTags={setActiveTags}
+                  handleTagClick={handleTagClick}
                 />
               }
             />

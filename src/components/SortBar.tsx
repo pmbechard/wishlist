@@ -5,16 +5,14 @@ interface Props {
   products: Product[];
   getSortBy: string;
   setSortBy: React.Dispatch<React.SetStateAction<string>>;
-  getActiveTags: string[];
-  setActiveTags: React.Dispatch<React.SetStateAction<string[]>>;
+  handleTagClick: (e: HTMLDivElement) => void;
 }
 
 const SortBar: React.FC<Props> = ({
   products,
   getSortBy,
   setSortBy,
-  getActiveTags,
-  setActiveTags,
+  handleTagClick,
 }) => {
   const [getTags, setTags] = useState<string[]>([]);
 
@@ -28,7 +26,8 @@ const SortBar: React.FC<Props> = ({
       });
       return tags;
     };
-    setTags(fetchTags());
+    const currentTags = fetchTags();
+    setTags(currentTags);
   }, []);
 
   const toggleTag = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -37,6 +36,7 @@ const SortBar: React.FC<Props> = ({
     } else {
       e.currentTarget.classList.add('disabled-tag');
     }
+    handleTagClick(e.currentTarget);
   };
 
   return (
