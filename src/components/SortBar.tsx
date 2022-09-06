@@ -6,7 +6,9 @@ interface Props {
   getSortBy: string;
   setSortBy: React.Dispatch<React.SetStateAction<string>>;
   getAllTags: string[];
+  getActiveTags: string[];
   toggleTag: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const SortBar: React.FC<Props> = ({
@@ -14,7 +16,9 @@ const SortBar: React.FC<Props> = ({
   getSortBy,
   setSortBy,
   getAllTags,
+  getActiveTags,
   toggleTag,
+  setShopFade,
 }) => {
   return (
     <div className='sort-bar-container'>
@@ -25,6 +29,7 @@ const SortBar: React.FC<Props> = ({
           className='sort-select'
           defaultValue={getSortBy}
           onChange={(e) => setSortBy(e.currentTarget.value)}
+          onClick={() => setShopFade(false)}
         >
           <option value='name-az'>Name (A-Z)</option>
           <option value='name-za'>Name (Z-A)</option>
@@ -36,7 +41,14 @@ const SortBar: React.FC<Props> = ({
       <div className='tags-container'>
         {getAllTags.map((tag) => {
           return (
-            <div key={tag} className='tag' onClick={(e) => toggleTag(e)}>
+            <div
+              key={tag}
+              className={`tag ${getActiveTags.includes(tag) || 'disabled-tag'}`}
+              onClick={(e) => {
+                toggleTag(e);
+                setShopFade(false);
+              }}
+            >
               {tag}
             </div>
           );

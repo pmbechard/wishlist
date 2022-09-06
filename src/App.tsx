@@ -11,11 +11,12 @@ import Product from './components/ProductInterface';
 import products from './data/products.json';
 
 const App: React.FC = () => {
-  const productsList: Product[] = structuredClone(products);
+  const productsList: Product[] = Array.from(products);
   const [getProducts, setProducts] = useState<Product[]>([]);
   const [getSortBy, setSortBy] = useState<string>('name-az');
-  const [getActiveTags, setActiveTags] = useState<string[]>([]);
   const [getAllTags, setAllTags] = useState<string[]>([]);
+  const [getActiveTags, setActiveTags] = useState<string[]>([]);
+  const [getShopFade, setShopFade] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchTags = (): string[] => {
@@ -31,6 +32,10 @@ const App: React.FC = () => {
     setAllTags(currentTags);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    setActiveTags(getAllTags);
+  }, [getAllTags]);
 
   useEffect(() => {
     const getSortedProducts = (): Product[] => {
@@ -57,9 +62,16 @@ const App: React.FC = () => {
   }, [getSortBy]);
 
   const handleTagClick = (e: HTMLDivElement): void => {
-    console.log(e);
-    const tagName = e.textContent;
+    const tagName = e.textContent || '';
     const isEnabled = !e.classList.contains('disabled-tag');
+    if (!isEnabled) {
+      const index = getActiveTags.indexOf(tagName);
+      setActiveTags(
+        getActiveTags.slice(0, index).concat(getActiveTags.slice(index + 1))
+      );
+    } else {
+      setActiveTags(getActiveTags.concat(tagName));
+    }
   };
 
   const toggleTag = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -74,7 +86,7 @@ const App: React.FC = () => {
   return (
     <div>
       <BrowserRouter>
-        <NavBar />
+        <NavBar setShopFade={setShopFade} />
         <AnimatePresence mode='wait'>
           <Routes>
             <Route path='/' element={<HomePage />} />
@@ -87,7 +99,10 @@ const App: React.FC = () => {
                   getSortBy={getSortBy}
                   setSortBy={setSortBy}
                   getAllTags={getAllTags}
+                  getActiveTags={getActiveTags}
                   toggleTag={toggleTag}
+                  getShopFade={getShopFade}
+                  setShopFade={setShopFade}
                 />
               }
             />

@@ -9,7 +9,10 @@ interface Props {
   getSortBy: string;
   setSortBy: React.Dispatch<React.SetStateAction<string>>;
   getAllTags: string[];
+  getActiveTags: string[];
   toggleTag: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  getShopFade: boolean;
+  setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ShopPage: React.FC<Props> = ({
@@ -17,12 +20,15 @@ const ShopPage: React.FC<Props> = ({
   getSortBy,
   setSortBy,
   getAllTags,
+  getActiveTags,
   toggleTag,
+  getShopFade,
+  setShopFade,
 }) => {
   return (
     <motion.div
       key={new Date().getTime()}
-      initial={{ opacity: 0 }}
+      initial={{ opacity: `${getShopFade ? 0 : 1}` }}
       animate={{ opacity: 1, transition: { delay: 0.1 } }}
       exit={{ opacity: 1 }}
       data-testid='shop-container'
@@ -34,7 +40,9 @@ const ShopPage: React.FC<Props> = ({
         getSortBy={getSortBy}
         setSortBy={setSortBy}
         getAllTags={getAllTags}
+        getActiveTags={getActiveTags}
         toggleTag={toggleTag}
+        setShopFade={setShopFade}
       />
       <ProductsArea products={getProducts} />
     </motion.div>
