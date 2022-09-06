@@ -2,8 +2,6 @@
 
 A sample online shop created with React using TypeScript.
 
-<img src='./img/preview.png' alt='preview' />
+<img src='./preview.png' alt='preview'>
 
-Repo: <https://github.com/pmbechard/wishlist>
-
-Live: Currently N/A
+### Live at: Currently N/A
