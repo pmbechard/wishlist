@@ -1,0 +1,31 @@
+.floating-cart {
+  position: fixed;
+  right: 10px;
+  top: $headerHeight;
+  color: $whiteColour;
+  cursor: pointer;
+  padding: 10px;
+  border: 3px solid $lightColour;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  transition: $transition;
+  background-color: $whiteColour;
+  color: $accentColour;
+  z-index: 2;
+
+  &:hover {
+    border: 3px solid $accentColour;
+    color: $lightColour;
+  }
+
+  &:active {
+    background-color: $whiteColour;
+    color: $accentColour;
+    opacity: 0.7;
+  }
+
+  .cart-icon {
+    height: 30px;
+    width: 30px;
+  }
+}

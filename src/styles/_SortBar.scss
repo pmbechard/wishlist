@@ -1,6 +1,6 @@
 .sort-bar-container {
   color: $whiteColour;
-  height: 10vh;
+  padding: 20px 0;
   @include fCenter();
   justify-content: space-around;
   flex-wrap: wrap;

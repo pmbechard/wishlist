@@ -148,7 +148,7 @@ nav .logo-area {
 
 .sort-bar-container {
   color: #eee;
-  height: 10vh;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,6 +178,35 @@ nav .logo-area {
 }
 .sort-bar-container .tags-container .disabled-tag {
   opacity: 0.6;
+}
+
+.floating-cart {
+  position: fixed;
+  right: 10px;
+  top: 10vh;
+  color: #eee;
+  cursor: pointer;
+  padding: 10px;
+  border: 3px solid #e1a04d;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  transition: all 0.2s ease-out;
+  background-color: #eee;
+  color: #72c5a5;
+  z-index: 2;
+}
+.floating-cart:hover {
+  border: 3px solid #72c5a5;
+  color: #e1a04d;
+}
+.floating-cart:active {
+  background-color: #eee;
+  color: #72c5a5;
+  opacity: 0.7;
+}
+.floating-cart .cart-icon {
+  height: 30px;
+  width: 30px;
 }
 
 .product-card {
@@ -297,6 +326,12 @@ footer small {
   }
   .about-body {
     width: 80%;
+  }
+  .shop-container {
+    padding: 40px 20px;
+  }
+  .floating-cart {
+    top: 20vh;
   }
 }
 body {

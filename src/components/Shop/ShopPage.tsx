@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Product from './ProductInterface';
 import SortBar from './SortBar';
 import ProductsArea from './ProductsArea';
+import FloatingCart from './Cart/FloatingCart';
 
 interface Props {
   getProducts: Product[];
@@ -34,7 +35,7 @@ const ShopPage: React.FC<Props> = ({
       data-testid='shop-container'
       className='shop-container'
     >
-      {/* TODO: ADD FLOATING SHOPPING CART MODAL OPTION */}
+      <FloatingCart />
       <SortBar
         products={getProducts}
         getSortBy={getSortBy}
