@@ -15,6 +15,22 @@ const App: React.FC = () => {
   const [getProducts, setProducts] = useState<Product[]>([]);
   const [getSortBy, setSortBy] = useState<string>('name-az');
   const [getActiveTags, setActiveTags] = useState<string[]>([]);
+  const [getAllTags, setAllTags] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fetchTags = (): string[] => {
+      const tags: string[] = [];
+      // eslint-disable-next-line array-callback-return
+      products.map((product) => {
+        for (let i = 0; i < product.tags.length; i++)
+          if (!tags.includes(product.tags[i])) tags.push(product.tags[i]);
+      });
+      return tags;
+    };
+    const currentTags = fetchTags();
+    setAllTags(currentTags);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     const getSortedProducts = (): Product[] => {
@@ -42,6 +58,17 @@ const App: React.FC = () => {
 
   const handleTagClick = (e: HTMLDivElement): void => {
     console.log(e);
+    const tagName = e.textContent;
+    const isEnabled = !e.classList.contains('disabled-tag');
+  };
+
+  const toggleTag = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (e.currentTarget.classList.contains('disabled-tag')) {
+      e.currentTarget.classList.remove('disabled-tag');
+    } else {
+      e.currentTarget.classList.add('disabled-tag');
+    }
+    handleTagClick(e.currentTarget);
   };
 
   return (
@@ -59,7 +86,8 @@ const App: React.FC = () => {
                   getProducts={getProducts}
                   getSortBy={getSortBy}
                   setSortBy={setSortBy}
-                  handleTagClick={handleTagClick}
+                  getAllTags={getAllTags}
+                  toggleTag={toggleTag}
                 />
               }
             />

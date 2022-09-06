@@ -8,14 +8,16 @@ interface Props {
   getProducts: Product[];
   getSortBy: string;
   setSortBy: React.Dispatch<React.SetStateAction<string>>;
-  handleTagClick: (e: HTMLDivElement) => void;
+  getAllTags: string[];
+  toggleTag: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
 const ShopPage: React.FC<Props> = ({
   getProducts,
   getSortBy,
   setSortBy,
-  handleTagClick,
+  getAllTags,
+  toggleTag,
 }) => {
   return (
     <motion.div
@@ -31,7 +33,8 @@ const ShopPage: React.FC<Props> = ({
         products={getProducts}
         getSortBy={getSortBy}
         setSortBy={setSortBy}
-        handleTagClick={handleTagClick}
+        getAllTags={getAllTags}
+        toggleTag={toggleTag}
       />
       <ProductsArea products={getProducts} />
     </motion.div>
