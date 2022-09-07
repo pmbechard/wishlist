@@ -219,10 +219,17 @@ nav .logo-area {
   transition: all 0.2s ease-out;
   width: min(33vw, 250px);
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.product-card h3 {
+.product-card h1 {
   margin: 0;
   height: 50px;
+  width: 100%;
+  font-size: 24px;
 }
 .product-card .product-img-container {
   display: flex;
@@ -230,10 +237,10 @@ nav .logo-area {
   align-items: center;
   flex-direction: row;
   padding: 10px;
-  height: 200px;
 }
 .product-card .product-img-container img {
   max-height: 200px;
+  width: auto;
   max-width: 200px;
 }
 .product-card .product-footer {
@@ -242,6 +249,8 @@ nav .logo-area {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  height: 50px;
+  width: 100%;
 }
 .product-card:hover {
   transform: scale(1.02);
