@@ -198,10 +198,10 @@ nav .logo-area {
 .floating-cart:hover {
   border: 3px solid #72c5a5;
   color: #e1a04d;
+  transform: scale(1.2);
 }
 .floating-cart:active {
   background-color: #eee;
-  color: #72c5a5;
   opacity: 0.7;
 }
 .floating-cart .cart-icon {
@@ -253,6 +253,7 @@ nav .logo-area {
   align-items: center;
   flex-direction: row;
   gap: 15px;
+  padding-bottom: 10px;
 }
 .btn-ribbon .btn-ribbon-icon {
   font-size: 18px;

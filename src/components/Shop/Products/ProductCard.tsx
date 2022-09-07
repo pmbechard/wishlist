@@ -4,9 +4,10 @@ import ProductBtnRibbon from './ProductBtnRibbon';
 
 interface Props {
   product: Product;
+  handleProductView: (product: Product) => void;
 }
 
-const ProductCard: React.FC<Props> = ({ product }) => {
+const ProductCard: React.FC<Props> = ({ product, handleProductView }) => {
   return (
     <div className='product-card'>
       <h3>{product.name}</h3>
@@ -15,7 +16,10 @@ const ProductCard: React.FC<Props> = ({ product }) => {
       </div>
       <div className='product-footer'>
         <h4>{product.price}USD</h4>
-        <ProductBtnRibbon product={product} />
+        <ProductBtnRibbon
+          product={product}
+          handleProductView={handleProductView}
+        />
       </div>
     </div>
   );

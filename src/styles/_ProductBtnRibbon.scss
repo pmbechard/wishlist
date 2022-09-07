@@ -1,6 +1,7 @@
 .btn-ribbon {
   @include fCenter();
   gap: 15px;
+  padding-bottom: 10px;
 
   .btn-ribbon-icon {
     font-size: 18px;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Product from './ProductInterface';
-import SortBar from './SortBar';
-import ProductsArea from './ProductsArea';
+import Product from './Products/ProductInterface';
+import SortBar from './Products/SortBar';
+import ProductsArea from './Products/ProductsArea';
 import FloatingCart from './Cart/FloatingCart';
 
 interface Props {
@@ -14,6 +14,7 @@ interface Props {
   toggleTag: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   getShopFade: boolean;
   setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
+  handleProductView: (product: Product) => void;
 }
 
 const ShopPage: React.FC<Props> = ({
@@ -25,6 +26,7 @@ const ShopPage: React.FC<Props> = ({
   toggleTag,
   getShopFade,
   setShopFade,
+  handleProductView,
 }) => {
   return (
     <motion.div
@@ -45,7 +47,10 @@ const ShopPage: React.FC<Props> = ({
         toggleTag={toggleTag}
         setShopFade={setShopFade}
       />
-      <ProductsArea products={getProducts} />
+      <ProductsArea
+        products={getProducts}
+        handleProductView={handleProductView}
+      />
     </motion.div>
   );
 };

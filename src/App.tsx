@@ -7,7 +7,7 @@ import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ShopPage from './components/Shop/ShopPage';
 import Footer from './components/Footer';
-import Product from './components/Shop/ProductInterface';
+import Product from './components/Shop/Products/ProductInterface';
 import products from './data/products.json';
 
 const App: React.FC = () => {
@@ -91,6 +91,10 @@ const App: React.FC = () => {
     handleTagClick(e.currentTarget);
   };
 
+  const handleProductView = (product: Product): void => {
+    console.log(`clicked view product of product: ${product.name}`);
+  };
+
   return (
     <div>
       <BrowserRouter>
@@ -111,6 +115,7 @@ const App: React.FC = () => {
                   toggleTag={toggleTag}
                   getShopFade={getShopFade}
                   setShopFade={setShopFade}
+                  handleProductView={handleProductView}
                 />
               }
             />
