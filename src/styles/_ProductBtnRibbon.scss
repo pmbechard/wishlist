@@ -3,6 +3,10 @@
   gap: 15px;
   padding-bottom: 10px;
 
+  .view-btn {
+    color: $lightColour;
+  }
+
   .btn-ribbon-icon {
     font-size: 18px;
     transition: $transition;

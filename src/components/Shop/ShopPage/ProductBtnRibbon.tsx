@@ -5,6 +5,7 @@ import {
   BsFillEyeFill,
 } from 'react-icons/bs';
 import Product from './ProductInterface';
+import { Link } from 'react-router-dom';
 
 interface Props {
   product: Product;
@@ -18,10 +19,12 @@ const ProductBtnRibbon: React.FC<Props> = ({ product, handleProductView }) => {
 
   return (
     <div className='btn-ribbon'>
-      <BsFillEyeFill
-        className='btn-ribbon-icon'
-        onClick={(e) => handleProductView(product)}
-      />
+      <Link className='view-btn' to={`/shop/${product.id}`}>
+        <BsFillEyeFill
+          className='btn-ribbon-icon'
+          onClick={(e) => handleProductView(product)}
+        />
+      </Link>
       <BsFillCartPlusFill
         className='btn-ribbon-icon'
         onClick={() => console.log('clicked')}

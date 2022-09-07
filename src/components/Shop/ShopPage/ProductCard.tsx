@@ -9,7 +9,7 @@ interface Props {
 
 const ProductCard: React.FC<Props> = ({ product, handleProductView }) => {
   return (
-    <div className='product-card'>
+    <div className='product-card' id={`pc-${product.id}`}>
       <h3>{product.name}</h3>
       <div className='product-img-container'>
         <img src={product.img} alt={product.name} />

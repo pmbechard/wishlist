@@ -5,10 +5,11 @@ import { AnimatePresence } from 'framer-motion';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
-import ShopPage from './components/Shop/ShopPage';
+import ShopPage from './components/Shop/ShopPage/ShopPage';
 import Footer from './components/Footer';
-import Product from './components/Shop/Products/ProductInterface';
+import Product from './components/Shop/ShopPage/ProductInterface';
 import products from './data/products.json';
+import ProductPage from './components/Shop/ProductPage/ProductPage';
 
 const App: React.FC = () => {
   const productsList: Product[] = Array.from(products);
@@ -91,9 +92,7 @@ const App: React.FC = () => {
     handleTagClick(e.currentTarget);
   };
 
-  const handleProductView = (product: Product): void => {
-    console.log(`clicked view product of product: ${product.name}`);
-  };
+  const handleProductView = (product: Product): void => {};
 
   return (
     <div>
@@ -118,6 +117,11 @@ const App: React.FC = () => {
                   handleProductView={handleProductView}
                 />
               }
+            />
+            {/* FIXME: */}
+            <Route
+              path='/shop/:id'
+              element={<ProductPage products={productsList} />}
             />
           </Routes>
         </AnimatePresence>

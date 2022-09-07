@@ -255,6 +255,9 @@ nav .logo-area {
   gap: 15px;
   padding-bottom: 10px;
 }
+.btn-ribbon .view-btn {
+  color: #e1a04d;
+}
 .btn-ribbon .btn-ribbon-icon {
   font-size: 18px;
   transition: all 0.2s ease-out;
@@ -263,6 +266,14 @@ nav .logo-area {
 .btn-ribbon .btn-ribbon-icon:hover {
   transform: scale(1.1);
   color: #72c5a5;
+}
+
+.product-page-container {
+  color: #eee;
+}
+.product-page-container img {
+  width: auto;
+  max-height: 60vh;
 }
 
 footer {

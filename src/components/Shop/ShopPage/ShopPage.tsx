@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Product from './Products/ProductInterface';
-import SortBar from './Products/SortBar';
-import ProductsArea from './Products/ProductsArea';
-import FloatingCart from './Cart/FloatingCart';
+import Product from './ProductInterface';
+import SortBar from './SortBar';
+import ProductsArea from './ProductsArea';
+import FloatingCart from '../Cart/FloatingCart';
 
 interface Props {
   getProducts: Product[];
