@@ -1,8 +1,20 @@
 .product-page-container {
+  @include fCenter();
   color: $whiteColour;
+  height: $contentHeight;
+  gap: 10vw;
+  text-align: center;
+  margin: 0 auto;
 
   img {
     width: auto;
     max-height: 60vh;
   }
+}
+
+.large-product-view-info {
+  max-width: 200px;
+  height: 60vh;
+  @include fCenter(column);
+  justify-content: flex-start;
 }

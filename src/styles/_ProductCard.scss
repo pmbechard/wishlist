@@ -6,6 +6,8 @@
   padding: 20px;
   background-color: $whiteColour;
   transition: $transition;
+  width: min(33vw, 250px);
+  margin: 0 auto;
 
   h3 {
     margin: 0;

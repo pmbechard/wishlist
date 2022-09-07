@@ -217,6 +217,8 @@ nav .logo-area {
   padding: 20px;
   background-color: #eee;
   transition: all 0.2s ease-out;
+  width: min(33vw, 250px);
+  margin: 0 auto;
 }
 .product-card h3 {
   margin: 0;
@@ -269,11 +271,29 @@ nav .logo-area {
 }
 
 .product-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   color: #eee;
+  height: 80vh;
+  gap: 10vw;
+  text-align: center;
+  margin: 0 auto;
 }
 .product-page-container img {
   width: auto;
   max-height: 60vh;
+}
+
+.large-product-view-info {
+  max-width: 200px;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 footer {
@@ -344,6 +364,17 @@ footer small {
   }
   .floating-cart {
     top: 20vh;
+  }
+  .product-card {
+    min-width: 250px;
+  }
+  .product-page-container {
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+  }
+  .large-product-view-info {
+    max-width: 80vw;
   }
 }
 body {

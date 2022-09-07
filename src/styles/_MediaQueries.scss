@@ -44,4 +44,18 @@
   .floating-cart {
     top: 20vh;
   }
+
+  .product-card {
+    min-width: 250px;
+  }
+
+  .product-page-container {
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+  }
+
+  .large-product-view-info {
+    max-width: 80vw;
+  }
 }

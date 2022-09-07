@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Product from '../ShopPage/ProductInterface';
+import LargeProductView from './LargeProductView';
 
 interface Props {
   products: Product[];
@@ -20,13 +21,13 @@ const ProductPage: React.FC<Props> = ({ products }) => {
   }, []);
 
   return (
-    <div className='product-page-container'>
+    <>
       {getProduct ? (
-        <img src={getProduct.img} alt={getProduct.name} />
+        <LargeProductView product={getProduct} />
       ) : (
         'Product not found...'
       )}
-    </div>
+    </>
   );
 };
 
