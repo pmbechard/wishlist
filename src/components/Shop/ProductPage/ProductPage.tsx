@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import FloatingCart from '../Cart/FloatingCart';
 import Product from '../ShopPage/ProductInterface';
 import LargeProductView from './LargeProductView';
 
@@ -22,6 +23,7 @@ const ProductPage: React.FC<Props> = ({ products }) => {
 
   return (
     <>
+      <FloatingCart />
       {getProduct ? (
         <LargeProductView product={getProduct} />
       ) : (

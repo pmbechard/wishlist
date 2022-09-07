@@ -1,7 +1,7 @@
 import React from 'react';
 import Product from '../ShopPage/ProductInterface';
 import { Link } from 'react-router-dom';
-import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
+import { BsFillArrowLeftSquareFill, BsFillCartPlusFill } from 'react-icons/bs';
 
 interface Props {
   product: Product;
@@ -12,13 +12,13 @@ const LargeProductView: React.FC<Props> = ({ product }) => {
     <>
       <div className='product-page-container'>
         <div className='large-product-view-info'>
-          <h2>{product.name}</h2>
-          <h3>Price: {product.price}USD</h3>
-          <h3>
+          <h1>{product.name}</h1>
+          <h2>Price: {product.price}USD</h2>
+          <h2>
             <a href={product.purchaseAt} target='_blank' rel='noreferrer'>
               Buy it here
             </a>
-          </h3>
+          </h2>
           <p>
             Tags:{' '}
             {product.tags.map((tag) => {
@@ -27,9 +27,12 @@ const LargeProductView: React.FC<Props> = ({ product }) => {
               return tag + ', ';
             })}
           </p>
-          <Link to='/shop/'>
-            <BsFillArrowLeftSquareFill />
-          </Link>
+          <div className='product-page-btns'>
+            <Link to='/shop/'>
+              <BsFillArrowLeftSquareFill className='product-page-icon' />
+            </Link>
+            <BsFillCartPlusFill className='product-page-icon' />
+          </div>
         </div>
         <img src={product.img} alt={product.name} />
       </div>
