@@ -377,8 +377,10 @@ nav .logo-area {
   height: 100%;
   opacity: 0.7;
 }
+.cart-modal-container .closed {
+  display: none;
+}
 .cart-modal-container .cart-modal-side-menu {
-  transform: translate(-400px);
   position: absolute;
   background-color: #eee;
   right: -400px;
@@ -388,31 +390,47 @@ nav .logo-area {
   height: 110vh;
   border: 5px solid #e1a04d;
 }
-
-.closed {
-  display: none;
+.cart-modal-container .slide-in {
+  -webkit-animation: slideIn 0.7s ease-in-out;
+          animation: slideIn 0.7s ease-in-out;
+  right: 0;
 }
-
-.slide-in {
-  -webkit-animation: slideIn 2s linear 2s;
-          animation: slideIn 2s linear 2s;
+.cart-modal-container .slide-out {
+  -webkit-animation: slideOut 0.7s ease-in-out;
+          animation: slideOut 0.7s ease-in-out;
 }
 
 @-webkit-keyframes slideIn {
-  from {
+  0% {
     right: -400px;
   }
-  to {
-    right: 0;
+  100% {
+    right: 0px;
   }
 }
 
 @keyframes slideIn {
-  from {
+  0% {
     right: -400px;
   }
-  to {
-    right: 0;
+  100% {
+    right: 0px;
+  }
+}
+@-webkit-keyframes slideOut {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: -400px;
+  }
+}
+@keyframes slideOut {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: -400px;
   }
 }
 footer {

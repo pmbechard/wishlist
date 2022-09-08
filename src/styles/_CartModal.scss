@@ -11,9 +11,11 @@
     height: 100%;
     opacity: 0.7;
   }
+  .closed {
+    display: none;
+  }
 
   .cart-modal-side-menu {
-    transform: translate(-400px);
     position: absolute;
     background-color: $whiteColour;
     right: -400px;
@@ -23,22 +25,31 @@
     height: 110vh;
     border: 5px solid $lightColour;
   }
-}
 
-.closed {
-  display: none;
-}
+  .slide-in {
+    animation: slideIn 0.7s ease-in-out;
+    right: 0;
+  }
 
-.slide-in {
-  animation: slideIn 2s linear 2s;
+  .slide-out {
+    animation: slideOut 0.7s ease-in-out;
+  }
 }
 
 // FIXME:
 @keyframes slideIn {
-  from {
+  0% {
     right: -400px;
   }
-  to {
-    right: 0;
+  100% {
+    right: 0px;
+  }
+}
+@keyframes slideOut {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: -400px;
   }
 }

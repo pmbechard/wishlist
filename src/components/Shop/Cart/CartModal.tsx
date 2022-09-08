@@ -7,13 +7,18 @@ interface Props {
 
 const CartModal: React.FC<Props> = ({ getCartIsOpen, setCartIsOpen }) => {
   return (
-    <div
-      className={`cart-modal-container ${
-        getCartIsOpen ? 'slide-in' : 'closed slide-out'
-      }`}
-    >
-      <div className='screen-cover' onClick={() => setCartIsOpen(false)}></div>
-      <div className='cart-modal-side-menu'>CartModal</div>
+    <div className={'cart-modal-container'}>
+      <div
+        className={`screen-cover ${getCartIsOpen || 'closed'}`}
+        onClick={() => setCartIsOpen(false)}
+      ></div>
+      <div
+        className={`cart-modal-side-menu ${
+          getCartIsOpen ? 'slide-in' : 'slide-out'
+        }`}
+      >
+        CartModal
+      </div>
     </div>
   );
 };
