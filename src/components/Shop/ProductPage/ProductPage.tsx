@@ -9,12 +9,14 @@ interface Props {
   products: Product[];
   setCartIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
+  handleAddToCart: (id: number) => void;
 }
 
 const ProductPage: React.FC<Props> = ({
   products,
   setCartIsOpen,
   setShopFade,
+  handleAddToCart,
 }) => {
   const [getProduct, setProduct] = useState<Product>();
   const { id } = useParams<string>();
@@ -32,7 +34,10 @@ const ProductPage: React.FC<Props> = ({
     <>
       <FloatingCart setCartIsOpen={setCartIsOpen} setShopFade={setShopFade} />
       {getProduct ? (
-        <LargeProductView product={getProduct} />
+        <LargeProductView
+          product={getProduct}
+          handleAddToCart={handleAddToCart}
+        />
       ) : (
         <div className='product-not-found-error'>
           <BsFillBagXFill className='error-icon' />

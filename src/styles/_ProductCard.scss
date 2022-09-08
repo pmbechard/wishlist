@@ -20,7 +20,8 @@
 
   .product-img-container {
     @include fCenter();
-    padding: 10px;
+    padding: 0 10px;
+    height: 200px;
 
     img {
       max-height: 200px;

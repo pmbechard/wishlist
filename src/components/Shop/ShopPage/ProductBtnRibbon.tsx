@@ -9,9 +9,10 @@ import { Link } from 'react-router-dom';
 
 interface Props {
   product: Product;
+  handleAddToCart: (id: number) => void;
 }
 
-const ProductBtnRibbon: React.FC<Props> = ({ product }) => {
+const ProductBtnRibbon: React.FC<Props> = ({ product, handleAddToCart }) => {
   const handleClickOut = () => {
     window.open(product.purchaseAt);
   };
@@ -23,7 +24,7 @@ const ProductBtnRibbon: React.FC<Props> = ({ product }) => {
       </Link>
       <BsFillCartPlusFill
         className='btn-ribbon-icon'
-        onClick={() => console.log('clicked')}
+        onClick={() => handleAddToCart(product.id)}
       />
       <BsBoxArrowUpRight className='btn-ribbon-icon' onClick={handleClickOut} />
     </div>

@@ -15,6 +15,7 @@ interface Props {
   getShopFade: boolean;
   setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
   setCartIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  handleAddToCart: (id: number) => void;
 }
 
 const ShopPage: React.FC<Props> = ({
@@ -27,6 +28,7 @@ const ShopPage: React.FC<Props> = ({
   getShopFade,
   setShopFade,
   setCartIsOpen,
+  handleAddToCart,
 }) => {
   return (
     <motion.div
@@ -47,7 +49,7 @@ const ShopPage: React.FC<Props> = ({
         toggleTag={toggleTag}
         setShopFade={setShopFade}
       />
-      <ProductsArea products={getProducts} />
+      <ProductsArea products={getProducts} handleAddToCart={handleAddToCart} />
     </motion.div>
   );
 };

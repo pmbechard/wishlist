@@ -5,9 +5,10 @@ import { BsFillArrowLeftSquareFill, BsFillCartPlusFill } from 'react-icons/bs';
 
 interface Props {
   product: Product;
+  handleAddToCart: (id: number) => void;
 }
 
-const LargeProductView: React.FC<Props> = ({ product }) => {
+const LargeProductView: React.FC<Props> = ({ product, handleAddToCart }) => {
   return (
     <>
       <div className='product-page-container'>
@@ -31,7 +32,10 @@ const LargeProductView: React.FC<Props> = ({ product }) => {
             <Link to='/shop/'>
               <BsFillArrowLeftSquareFill className='product-page-icon' />
             </Link>
-            <BsFillCartPlusFill className='product-page-icon' />
+            <BsFillCartPlusFill
+              className='product-page-icon'
+              onClick={() => handleAddToCart(product.id)}
+            />
           </div>
         </div>
         <img src={product.img} alt={product.name} />

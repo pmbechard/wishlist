@@ -236,7 +236,8 @@ nav .logo-area {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding: 10px;
+  padding: 0 10px;
+  height: 200px;
 }
 .product-card .product-img-container img {
   max-height: 200px;

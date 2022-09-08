@@ -1,16 +1,19 @@
 import React from 'react';
+import { BsExclamationSquareFill } from 'react-icons/bs';
+import Product from '../ShopPage/ProductInterface';
 
 interface Props {
   getCartIsOpen: boolean;
   setCartIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
+  getInCart: Product[];
 }
 
-// FIXME: slideOut animation occurs on page load
 const CartModal: React.FC<Props> = ({
   getCartIsOpen,
   setCartIsOpen,
   setShopFade,
+  getInCart,
 }) => {
   return (
     <div className={'cart-modal-container'} onClick={() => setShopFade(false)}>
@@ -23,7 +26,11 @@ const CartModal: React.FC<Props> = ({
           getCartIsOpen ? 'slide-in' : 'closed slide-out'
         }`}
       >
-        CartModal
+        {getInCart.length > 0
+          ? getInCart.map((item) => (
+              <div className='cart-item'>{item.name}</div>
+            ))
+          : 'Cart is empty'}
       </div>
     </div>
   );

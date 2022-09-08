@@ -95,6 +95,16 @@ const App: React.FC = () => {
     handleTagClick(e.currentTarget);
   };
 
+  const handleAddToCart = (id: number): void => {
+    for (let i = 0; i < productsList.length; i++) {
+      if (id === productsList[i].id) {
+        setInCart(getInCart.concat([productsList[i]]));
+        break;
+      }
+    }
+    console.log(getInCart);
+  };
+
   return (
     <div>
       <BrowserRouter>
@@ -110,6 +120,7 @@ const App: React.FC = () => {
                   products={productsList}
                   setCartIsOpen={setCartIsOpen}
                   setShopFade={setShopFade}
+                  handleAddToCart={handleAddToCart}
                 />
               }
             />
@@ -126,6 +137,7 @@ const App: React.FC = () => {
                   getShopFade={getShopFade}
                   setShopFade={setShopFade}
                   setCartIsOpen={setCartIsOpen}
+                  handleAddToCart={handleAddToCart}
                 />
               }
             />
@@ -136,6 +148,7 @@ const App: React.FC = () => {
           getCartIsOpen={getCartIsOpen}
           setCartIsOpen={setCartIsOpen}
           setShopFade={setShopFade}
+          getInCart={getInCart}
         />
       </BrowserRouter>
       <Footer />
