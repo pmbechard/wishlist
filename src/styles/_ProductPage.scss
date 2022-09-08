@@ -54,3 +54,22 @@
     }
   }
 }
+
+.product-not-found-error {
+  @include fCenter(column);
+  color: $whiteColour;
+  height: $contentHeight;
+
+  .error-icon {
+    height: 100px;
+    width: 100px;
+    color: $lightColour;
+  }
+
+  .product-page-btns {
+    margin-top: 0;
+    width: none;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}

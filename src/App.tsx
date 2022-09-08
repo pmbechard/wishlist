@@ -103,7 +103,11 @@ const App: React.FC = () => {
             <Route path='/' element={<HomePage />} />
             <Route path='/about' element={<AboutPage />} />
             <Route
-              path='/shop'
+              path='/shop/:id'
+              element={<ProductPage products={productsList} />}
+            />
+            <Route
+              path='shop/*'
               element={
                 <ShopPage
                   getProducts={getProducts}
@@ -118,11 +122,7 @@ const App: React.FC = () => {
                 />
               }
             />
-            {/* FIXME: */}
-            <Route
-              path='/shop/:id'
-              element={<ProductPage products={productsList} />}
-            />
+            <Route path='*' element={<HomePage />} />
           </Routes>
         </AnimatePresence>
       </BrowserRouter>
