@@ -421,6 +421,9 @@ footer small {
     width: 90vw;
     height: auto;
   }
+  .product-page-container img {
+    max-width: 90vw;
+  }
   .large-product-view-info {
     max-width: 80vw;
   }

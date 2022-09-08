@@ -53,6 +53,10 @@
     flex-direction: column;
     width: 90vw;
     height: auto;
+
+    img {
+      max-width: 90vw;
+    }
   }
 
   .large-product-view-info {

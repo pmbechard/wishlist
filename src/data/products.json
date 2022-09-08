@@ -21,7 +21,7 @@
     "price": "200",
     "img": "https://m.media-amazon.com/images/I/71EIEXzBN2L._AC_SX679_.jpg",
     "purchaseAt": "https://www.amazon.com/Roland-Compact-Tweaker-Trransformation-High-Quality/dp/B0B1157KSJ/ref=sr_1_1?keywords=roland+e-4+voice+tweaker&qid=1662184870&sprefix=roland+e-4+%2Caps%2C316&sr=8-1",
-    "tags": ["electronics", "synthesizers"]
+    "tags": ["electronics", "music"]
   },
   {
     "id": 3,
@@ -29,7 +29,7 @@
     "price": "550",
     "img": "https://cdn.shopify.com/s/files/1/0455/0485/6229/products/m8front_1100x.png?v=1635187892",
     "purchaseAt": "https://dirtywave.com/products/m8-tracker",
-    "tags": ["electronics", "synthesizers"]
+    "tags": ["electronics", "music"]
   },
   {
     "id": 4,
@@ -117,7 +117,7 @@
     "price": "560",
     "img": "https://m.media-amazon.com/images/I/91jx69qJYBL._AC_SY879_.jpg",
     "purchaseAt": "https://www.amazon.com/Roland-SP-404MKII-Creative-Polyphony-SP-404MK2/dp/B09J1TMSYV/ref=sr_1_3?keywords=sp404&qid=1662376013&sr=8-3",
-    "tags": ["electronics", "synthesizers"]
+    "tags": ["electronics", "music"]
   },
   {
     "id": 15,
@@ -134,5 +134,21 @@
     "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1540596407165",
     "purchaseAt": "https://www.apple.com/shop/product/MU8F2AM/A/apple-pencil-2nd-generation",
     "tags": ["budget", "electronics"]
+  },
+  {
+    "id": 17,
+    "name": "Alesis Nitro Mesh Electronic Drum Set",
+    "price": "450",
+    "img": "https://media.sweetwater.com/api/i/q-82__f-webp__ha-1483641b17608746__hmac-a57f7b467a9cdf6d61d22ec33b539e1372682824/images/items/750/NitroMeshKit-large.jpg.auto.webp",
+    "purchaseAt": "https://www.sweetwater.com/store/detail/NitroMeshKit--alesis-nitro-mesh-electronic-drum-set",
+    "tags": ["electronics", "music"]
+  },
+  {
+    "id": 18,
+    "name": "Focusrite Scarlett 2i2 3rd Gen USB Audio Interface",
+    "price": "180",
+    "img": "https://media.sweetwater.com/api/i/q-82__f-webp__ha-90540d1bdc7911c4__hmac-191befb88f2faa6f1c9b36a26e168a5b7a4c2b4b/images/items/750/Scarlet2i2G3-large.jpg.auto.webp",
+    "purchaseAt": "https://www.sweetwater.com/store/detail/Scarlet2i2G3--focusrite-scarlett-2i2-3rd-gen-usb-audio-interface",
+    "tags": ["electronics", "music"]
   }
 ]
