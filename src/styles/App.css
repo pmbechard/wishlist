@@ -364,6 +364,57 @@ nav .logo-area {
   justify-content: center;
 }
 
+.cart-modal-container {
+  transition: all 0.2s ease-out;
+}
+.cart-modal-container .screen-cover {
+  background-color: #061817;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+.cart-modal-container .cart-modal-side-menu {
+  transform: translate(-400px);
+  position: absolute;
+  background-color: #eee;
+  right: -400px;
+  top: 0;
+  z-index: 4;
+  width: 350px;
+  height: 110vh;
+  border: 5px solid #e1a04d;
+}
+
+.closed {
+  display: none;
+}
+
+.slide-in {
+  -webkit-animation: slideIn 2s linear 2s;
+          animation: slideIn 2s linear 2s;
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    right: -400px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    right: -400px;
+  }
+  to {
+    right: 0;
+  }
+}
 footer {
   width: 100%;
   background-color: #061817;

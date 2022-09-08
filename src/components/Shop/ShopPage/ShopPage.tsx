@@ -14,7 +14,7 @@ interface Props {
   toggleTag: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   getShopFade: boolean;
   setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
-  handleProductView: (product: Product) => void;
+  setCartIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ShopPage: React.FC<Props> = ({
@@ -26,7 +26,7 @@ const ShopPage: React.FC<Props> = ({
   toggleTag,
   getShopFade,
   setShopFade,
-  handleProductView,
+  setCartIsOpen,
 }) => {
   return (
     <motion.div
@@ -37,7 +37,7 @@ const ShopPage: React.FC<Props> = ({
       data-testid='shop-container'
       className='shop-container'
     >
-      <FloatingCart />
+      <FloatingCart setCartIsOpen={setCartIsOpen} />
       <SortBar
         products={getProducts}
         getSortBy={getSortBy}
@@ -47,10 +47,7 @@ const ShopPage: React.FC<Props> = ({
         toggleTag={toggleTag}
         setShopFade={setShopFade}
       />
-      <ProductsArea
-        products={getProducts}
-        handleProductView={handleProductView}
-      />
+      <ProductsArea products={getProducts} />
     </motion.div>
   );
 };

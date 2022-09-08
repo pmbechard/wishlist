@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Product from './components/Shop/ShopPage/ProductInterface';
 import products from './data/products.json';
 import ProductPage from './components/Shop/ProductPage/ProductPage';
+import CartModal from './components/Shop/Cart/CartModal';
 
 const App: React.FC = () => {
   const productsList: Product[] = Array.from(products);
@@ -18,6 +19,8 @@ const App: React.FC = () => {
   const [getAllTags, setAllTags] = useState<string[]>([]);
   const [getActiveTags, setActiveTags] = useState<string[]>([]);
   const [getShopFade, setShopFade] = useState<boolean>(true);
+  const [getCartIsOpen, setCartIsOpen] = useState<boolean>(false);
+  const [getInCart, setInCart] = useState<Product[]>([]);
 
   useEffect(() => {
     const fetchTags = (): string[] => {
@@ -92,8 +95,6 @@ const App: React.FC = () => {
     handleTagClick(e.currentTarget);
   };
 
-  const handleProductView = (product: Product): void => {};
-
   return (
     <div>
       <BrowserRouter>
@@ -104,7 +105,12 @@ const App: React.FC = () => {
             <Route path='/about' element={<AboutPage />} />
             <Route
               path='/shop/:id'
-              element={<ProductPage products={productsList} />}
+              element={
+                <ProductPage
+                  products={productsList}
+                  setCartIsOpen={setCartIsOpen}
+                />
+              }
             />
             <Route
               path='shop/*'
@@ -118,13 +124,17 @@ const App: React.FC = () => {
                   toggleTag={toggleTag}
                   getShopFade={getShopFade}
                   setShopFade={setShopFade}
-                  handleProductView={handleProductView}
+                  setCartIsOpen={setCartIsOpen}
                 />
               }
             />
             <Route path='*' element={<HomePage />} />
           </Routes>
         </AnimatePresence>
+        <CartModal
+          getCartIsOpen={getCartIsOpen}
+          setCartIsOpen={setCartIsOpen}
+        />
       </BrowserRouter>
       <Footer />
     </div>

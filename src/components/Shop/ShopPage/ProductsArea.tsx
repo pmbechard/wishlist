@@ -4,22 +4,15 @@ import Product from './ProductInterface';
 
 interface Props {
   products: Product[];
-  handleProductView: (product: Product) => void;
 }
 
-const ProductsArea: React.FC<Props> = ({ products, handleProductView }) => {
+const ProductsArea: React.FC<Props> = ({ products }) => {
   useEffect(() => {}, [products]);
 
   return (
     <div className='products-area'>
       {products.map((product) => {
-        return (
-          <ProductCard
-            key={product.id}
-            product={product}
-            handleProductView={handleProductView}
-          />
-        );
+        return <ProductCard key={product.id} product={product} />;
       })}
     </div>
   );

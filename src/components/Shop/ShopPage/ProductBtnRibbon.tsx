@@ -9,10 +9,9 @@ import { Link } from 'react-router-dom';
 
 interface Props {
   product: Product;
-  handleProductView: (product: Product) => void;
 }
 
-const ProductBtnRibbon: React.FC<Props> = ({ product, handleProductView }) => {
+const ProductBtnRibbon: React.FC<Props> = ({ product }) => {
   const handleClickOut = () => {
     window.open(product.purchaseAt);
   };
@@ -20,10 +19,7 @@ const ProductBtnRibbon: React.FC<Props> = ({ product, handleProductView }) => {
   return (
     <div className='btn-ribbon'>
       <Link className='view-btn' to={`/shop/${product.id}`}>
-        <BsFillEyeFill
-          className='btn-ribbon-icon'
-          onClick={(e) => handleProductView(product)}
-        />
+        <BsFillEyeFill className='btn-ribbon-icon' />
       </Link>
       <BsFillCartPlusFill
         className='btn-ribbon-icon'
