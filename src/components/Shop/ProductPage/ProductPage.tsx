@@ -8,9 +8,14 @@ import LargeProductView from './LargeProductView';
 interface Props {
   products: Product[];
   setCartIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const ProductPage: React.FC<Props> = ({ products, setCartIsOpen }) => {
+const ProductPage: React.FC<Props> = ({
+  products,
+  setCartIsOpen,
+  setShopFade,
+}) => {
   const [getProduct, setProduct] = useState<Product>();
   const { id } = useParams<string>();
 
@@ -25,7 +30,7 @@ const ProductPage: React.FC<Props> = ({ products, setCartIsOpen }) => {
 
   return (
     <>
-      <FloatingCart setCartIsOpen={setCartIsOpen} />
+      <FloatingCart setCartIsOpen={setCartIsOpen} setShopFade={setShopFade} />
       {getProduct ? (
         <LargeProductView product={getProduct} />
       ) : (

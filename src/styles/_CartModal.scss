@@ -31,12 +31,11 @@
     right: 0;
   }
 
-  .slide-out {
-    animation: slideOut 0.7s ease-in-out;
-  }
+  //   .slide-out {
+  //     animation: slideOut 0.7s ease-in-out;
+  //   }
 }
 
-// FIXME:
 @keyframes slideIn {
   0% {
     right: -400px;
@@ -45,11 +44,11 @@
     right: 0px;
   }
 }
-@keyframes slideOut {
-  0% {
-    right: 0px;
-  }
-  100% {
-    right: -400px;
-  }
-}
+// @keyframes slideOut {
+//   0% {
+//     right: 0px;
+//   }
+//   100% {
+//     right: -400px;
+//   }
+// }

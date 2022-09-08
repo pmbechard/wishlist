@@ -395,10 +395,6 @@ nav .logo-area {
           animation: slideIn 0.7s ease-in-out;
   right: 0;
 }
-.cart-modal-container .slide-out {
-  -webkit-animation: slideOut 0.7s ease-in-out;
-          animation: slideOut 0.7s ease-in-out;
-}
 
 @-webkit-keyframes slideIn {
   0% {
@@ -415,22 +411,6 @@ nav .logo-area {
   }
   100% {
     right: 0px;
-  }
-}
-@-webkit-keyframes slideOut {
-  0% {
-    right: 0px;
-  }
-  100% {
-    right: -400px;
-  }
-}
-@keyframes slideOut {
-  0% {
-    right: 0px;
-  }
-  100% {
-    right: -400px;
   }
 }
 footer {

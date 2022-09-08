@@ -37,7 +37,7 @@ const ShopPage: React.FC<Props> = ({
       data-testid='shop-container'
       className='shop-container'
     >
-      <FloatingCart setCartIsOpen={setCartIsOpen} />
+      <FloatingCart setCartIsOpen={setCartIsOpen} setShopFade={setShopFade} />
       <SortBar
         products={getProducts}
         getSortBy={getSortBy}

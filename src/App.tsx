@@ -109,6 +109,7 @@ const App: React.FC = () => {
                 <ProductPage
                   products={productsList}
                   setCartIsOpen={setCartIsOpen}
+                  setShopFade={setShopFade}
                 />
               }
             />
@@ -134,6 +135,7 @@ const App: React.FC = () => {
         <CartModal
           getCartIsOpen={getCartIsOpen}
           setCartIsOpen={setCartIsOpen}
+          setShopFade={setShopFade}
         />
       </BrowserRouter>
       <Footer />
