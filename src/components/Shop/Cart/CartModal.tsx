@@ -74,6 +74,7 @@ const CartModal: React.FC<Props> = ({
         {getQuantities && getQuantities.length > 0 ? (
           <CartItemDisplay
             getQuantities={getQuantities}
+            setQuantities={setQuantities}
             setCartIsOpen={setCartIsOpen}
           />
         ) : (

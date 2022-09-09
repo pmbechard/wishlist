@@ -91,12 +91,37 @@
           min-width: 50px;
           border: 1px solid $darkColour;
           padding: 3px;
-
+          margin-right: 10px;
           @include fCenter();
+          position: relative;
+
           img {
             height: 50px;
             max-width: 50px;
             object-fit: contain;
+          }
+
+          .cart-item-quantity-btns {
+            @include fCenter(column);
+            gap: 10px;
+            position: absolute;
+            right: -10px;
+
+            .quantity-btn {
+              height: 20px;
+              width: 20px;
+              cursor: pointer;
+              color: $darkColour;
+
+              &:hover {
+                opacity: 0.7;
+              }
+
+              &:active {
+                opacity: 0.7;
+                color: $lightColour;
+              }
+            }
           }
         }
       }
