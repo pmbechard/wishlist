@@ -67,13 +67,18 @@ const CartModal: React.FC<Props> = ({
           getCartIsOpen ? 'slide-in' : 'closed slide-out'
         }`}
       >
-        {getQuantities
-          ? getQuantities.map((item) => (
-              <div className='cart-item'>
-                {item.quantity}x - {item.name}
-              </div>
-            ))
-          : 'Cart is empty'}
+        {getQuantities && getQuantities.length > 0 ? (
+          getQuantities.map((item) => (
+            <div className='cart-item' key={item.id}>
+              {item.quantity}x - {item.name}
+            </div>
+          ))
+        ) : (
+          <div className='empty-cart-msg'>
+            <BsExclamationSquareFill />
+            <h1>Cart is empty</h1>
+          </div>
+        )}
       </div>
     </div>
   );
