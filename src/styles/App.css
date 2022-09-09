@@ -137,7 +137,7 @@ nav .logo-area {
 .shop-container {
   height: 80vh;
   padding: 40px 80px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .shop-container .products-area {
   display: grid;
@@ -390,6 +390,36 @@ nav .logo-area {
   width: 350px;
   height: 110vh;
   border: 5px solid #e1a04d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.cart-modal-container .cart-modal-side-menu .empty-cart-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20vh;
+}
+.cart-modal-container .cart-modal-side-menu .empty-cart-msg .empty-cart-icon {
+  height: 50px;
+  width: 50px;
+}
+.cart-modal-container .cart-modal-side-menu .empty-cart-msg .empty-cart-back {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.cart-modal-container .cart-modal-side-menu .empty-cart-msg .empty-cart-back:hover {
+  transform: scale(1.1);
+  color: #e1a04d;
+}
+.cart-modal-container .cart-modal-side-menu .empty-cart-msg .empty-cart-back:active {
+  transform: scale(0.95);
+  color: #72c5a5;
+  opacity: 0.9;
 }
 .cart-modal-container .slide-in {
   -webkit-animation: slideIn 0.7s ease-in-out;

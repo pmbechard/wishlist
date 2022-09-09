@@ -24,16 +24,41 @@
     width: 350px;
     height: 110vh;
     border: 5px solid $lightColour;
+    @include fCenter();
+
+    .empty-cart-msg {
+      @include fCenter(column);
+      margin-bottom: 20vh;
+
+      .empty-cart-icon {
+        height: 50px;
+        width: 50px;
+      }
+
+      .empty-cart-back {
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+          transform: scale(1.1);
+          color: $lightColour;
+        }
+
+        &:active {
+          transform: scale(0.95);
+          color: $accentColour;
+          opacity: 0.9;
+        }
+      }
+    }
   }
 
   .slide-in {
     animation: slideIn 0.7s ease-in-out;
     right: 0;
   }
-
-  //   .slide-out {
-  //     animation: slideOut 0.7s ease-in-out;
-  //   }
 }
 
 @keyframes slideIn {
@@ -44,11 +69,3 @@
     right: 0px;
   }
 }
-// @keyframes slideOut {
-//   0% {
-//     right: 0px;
-//   }
-//   100% {
-//     right: -400px;
-//   }
-// }

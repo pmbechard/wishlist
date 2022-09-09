@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { BsExclamationSquareFill } from 'react-icons/bs';
+import {
+  BsExclamationSquareFill,
+  BsFillArrowLeftSquareFill,
+} from 'react-icons/bs';
 import Product from '../ShopPage/ProductInterface';
 
 interface Props {
@@ -9,9 +12,7 @@ interface Props {
   getInCart: Product[];
 }
 
-interface ItemQuantities {
-  id: number;
-  name: string;
+interface ItemQuantities extends Product {
   quantity: number;
 }
 
@@ -35,8 +36,7 @@ const CartModal: React.FC<Props> = ({
           }
           if (quantitiesList.length - 1 === j) {
             quantitiesList.push({
-              id: getInCart[i].id,
-              name: getInCart[i].name,
+              ...getInCart[i],
               quantity: 1,
             });
             break;
@@ -44,8 +44,7 @@ const CartModal: React.FC<Props> = ({
         }
         if (quantitiesList.length === 0) {
           quantitiesList.push({
-            id: getInCart[i].id,
-            name: getInCart[i].name,
+            ...getInCart[i],
             quantity: 1,
           });
         }
@@ -64,7 +63,7 @@ const CartModal: React.FC<Props> = ({
       ></div>
       <div
         className={`cart-modal-side-menu ${
-          getCartIsOpen ? 'slide-in' : 'closed slide-out'
+          getCartIsOpen ? 'slide-in' : 'closed'
         }`}
       >
         {getQuantities && getQuantities.length > 0 ? (
@@ -75,8 +74,13 @@ const CartModal: React.FC<Props> = ({
           ))
         ) : (
           <div className='empty-cart-msg'>
-            <BsExclamationSquareFill />
+            <BsExclamationSquareFill className='empty-cart-icon' />
             <h1>Cart is empty</h1>
+            <h2>Get shopping!</h2>
+            <BsFillArrowLeftSquareFill
+              onClick={() => setCartIsOpen(false)}
+              className='empty-cart-back'
+            />
           </div>
         )}
       </div>
