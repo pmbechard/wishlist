@@ -35,6 +35,7 @@
         height: 30px;
         width: 30px;
         cursor: pointer;
+        transition: $transition;
 
         &:hover {
           transform: scale(1.1);
@@ -96,6 +97,41 @@
             height: 50px;
             max-width: 50px;
             object-fit: contain;
+          }
+        }
+      }
+      .totals-area {
+        @extend .cart-item;
+        @include fCenter(column);
+        font-size: 24px;
+        align-items: flex-end;
+        justify-self: flex-end;
+
+        p {
+          padding: 0;
+          margin: 0;
+        }
+
+        .checkout-btn {
+          padding: 10px;
+          background-color: $lightColour;
+          color: $darkColour;
+          font-family: $headerFont;
+          font-size: 16px;
+          border: none;
+          border-radius: 12px;
+          cursor: pointer;
+          transition: $transition;
+
+          &:hover {
+            transform: scale(1.01);
+            background-color: $accentColour;
+          }
+
+          &:active {
+            transform: scale(0.95);
+            background-color: $lightColour;
+            opacity: 0.9;
           }
         }
       }

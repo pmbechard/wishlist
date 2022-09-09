@@ -72,7 +72,10 @@ const CartModal: React.FC<Props> = ({
           />
         </div>
         {getQuantities && getQuantities.length > 0 ? (
-          <CartItemDisplay getQuantities={getQuantities} />
+          <CartItemDisplay
+            getQuantities={getQuantities}
+            setCartIsOpen={setCartIsOpen}
+          />
         ) : (
           <div className='empty-cart-msg'>
             <BsExclamationSquareFill className='empty-cart-icon' />
