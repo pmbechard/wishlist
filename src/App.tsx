@@ -102,7 +102,6 @@ const App: React.FC = () => {
         break;
       }
     }
-    console.log(getInCart);
   };
 
   return (

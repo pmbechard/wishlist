@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsExclamationSquareFill } from 'react-icons/bs';
 import Product from '../ShopPage/ProductInterface';
 
@@ -9,12 +9,53 @@ interface Props {
   getInCart: Product[];
 }
 
+interface ItemQuantities {
+  id: number;
+  name: string;
+  quantity: number;
+}
+
 const CartModal: React.FC<Props> = ({
   getCartIsOpen,
   setCartIsOpen,
   setShopFade,
   getInCart,
 }) => {
+  const [getQuantities, setQuantities] = useState<ItemQuantities[]>();
+
+  useEffect(() => {
+    const processQuantities = () => {
+      if (!getInCart) return;
+      const quantitiesList: ItemQuantities[] = [];
+      for (let i = 0; i < getInCart.length; i++) {
+        for (let j = 0; j < quantitiesList.length; j++) {
+          if (getInCart[i].name === quantitiesList[j].name) {
+            quantitiesList[j].quantity++;
+            break;
+          }
+          if (quantitiesList.length - 1 === j) {
+            quantitiesList.push({
+              id: getInCart[i].id,
+              name: getInCart[i].name,
+              quantity: 1,
+            });
+            break;
+          }
+        }
+        if (quantitiesList.length === 0) {
+          quantitiesList.push({
+            id: getInCart[i].id,
+            name: getInCart[i].name,
+            quantity: 1,
+          });
+        }
+      }
+      return quantitiesList;
+    };
+
+    setQuantities(processQuantities);
+  }, [getInCart]);
+
   return (
     <div className={'cart-modal-container'} onClick={() => setShopFade(false)}>
       <div
@@ -26,9 +67,11 @@ const CartModal: React.FC<Props> = ({
           getCartIsOpen ? 'slide-in' : 'closed slide-out'
         }`}
       >
-        {getInCart.length > 0
-          ? getInCart.map((item) => (
-              <div className='cart-item'>{item.name}</div>
+        {getQuantities
+          ? getQuantities.map((item) => (
+              <div className='cart-item'>
+                {item.quantity}x - {item.name}
+              </div>
             ))
           : 'Cart is empty'}
       </div>
