@@ -13,6 +13,7 @@ interface Props {
   setCartIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
   getInCart: Product[];
+  setInCart: React.Dispatch<React.SetStateAction<Product[]>>;
 }
 
 const CartModal: React.FC<Props> = ({
@@ -20,6 +21,7 @@ const CartModal: React.FC<Props> = ({
   setCartIsOpen,
   setShopFade,
   getInCart,
+  setInCart,
 }) => {
   const [getQuantities, setQuantities] = useState<ItemQuantities[]>();
 
@@ -76,6 +78,8 @@ const CartModal: React.FC<Props> = ({
             getQuantities={getQuantities}
             setQuantities={setQuantities}
             setCartIsOpen={setCartIsOpen}
+            getInCart={getInCart}
+            setInCart={setInCart}
           />
         ) : (
           <div className='empty-cart-msg'>

@@ -149,6 +149,7 @@ const App: React.FC = () => {
           setCartIsOpen={setCartIsOpen}
           setShopFade={setShopFade}
           getInCart={getInCart}
+          setInCart={setInCart}
         />
       </BrowserRouter>
       <Footer />
