@@ -96,6 +96,7 @@ const App: React.FC = () => {
   };
 
   const handleAddToCart = (id: number): void => {
+    setShopFade(false);
     for (let i = 0; i < productsList.length; i++) {
       if (id === productsList[i].id) {
         setInCart(getInCart.concat([productsList[i]]));
