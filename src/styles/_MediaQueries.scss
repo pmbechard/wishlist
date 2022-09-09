@@ -62,4 +62,16 @@
   .large-product-view-info {
     max-width: 80vw;
   }
+
+  .cart-modal-container {
+    .cart-modal-side-menu {
+      width: 95vw;
+      padding: 5px;
+      .checkout-container {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
 }

@@ -2,18 +2,17 @@ import React, { useEffect, useState } from 'react';
 import {
   BsExclamationSquareFill,
   BsFillArrowLeftSquareFill,
+  BsFillFileXFill,
 } from 'react-icons/bs';
 import Product from '../ShopPage/ProductInterface';
+import CartItemDisplay from './CartItemDisplay';
+import { ItemQuantities } from './ItemQuantitiesInterface';
 
 interface Props {
   getCartIsOpen: boolean;
   setCartIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
   getInCart: Product[];
-}
-
-interface ItemQuantities extends Product {
-  quantity: number;
 }
 
 const CartModal: React.FC<Props> = ({
@@ -66,12 +65,14 @@ const CartModal: React.FC<Props> = ({
           getCartIsOpen ? 'slide-in' : 'closed'
         }`}
       >
+        <div className='cart-exit-btn-container'>
+          <BsFillFileXFill
+            className='close-cart-icon'
+            onClick={() => setCartIsOpen(false)}
+          />
+        </div>
         {getQuantities && getQuantities.length > 0 ? (
-          getQuantities.map((item) => (
-            <div className='cart-item' key={item.id}>
-              {item.quantity}x - {item.name}
-            </div>
-          ))
+          <CartItemDisplay getQuantities={getQuantities} />
         ) : (
           <div className='empty-cart-msg'>
             <BsExclamationSquareFill className='empty-cart-icon' />
