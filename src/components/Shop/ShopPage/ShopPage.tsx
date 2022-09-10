@@ -16,6 +16,7 @@ interface Props {
   setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
   setCartIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   handleAddToCart: (id: number) => void;
+  getInCart: Product[];
 }
 
 const ShopPage: React.FC<Props> = ({
@@ -29,6 +30,7 @@ const ShopPage: React.FC<Props> = ({
   setShopFade,
   setCartIsOpen,
   handleAddToCart,
+  getInCart,
 }) => {
   return (
     <motion.div
@@ -39,7 +41,11 @@ const ShopPage: React.FC<Props> = ({
       data-testid='shop-container'
       className='shop-container'
     >
-      <FloatingCart setCartIsOpen={setCartIsOpen} setShopFade={setShopFade} />
+      <FloatingCart
+        setCartIsOpen={setCartIsOpen}
+        setShopFade={setShopFade}
+        getInCart={getInCart}
+      />
       <SortBar
         products={getProducts}
         getSortBy={getSortBy}

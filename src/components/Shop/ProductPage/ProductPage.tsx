@@ -10,6 +10,7 @@ interface Props {
   setCartIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
   handleAddToCart: (id: number) => void;
+  getInCart: Product[];
 }
 
 const ProductPage: React.FC<Props> = ({
@@ -17,6 +18,7 @@ const ProductPage: React.FC<Props> = ({
   setCartIsOpen,
   setShopFade,
   handleAddToCart,
+  getInCart,
 }) => {
   const [getProduct, setProduct] = useState<Product>();
   const { id } = useParams<string>();
@@ -32,7 +34,11 @@ const ProductPage: React.FC<Props> = ({
 
   return (
     <>
-      <FloatingCart setCartIsOpen={setCartIsOpen} setShopFade={setShopFade} />
+      <FloatingCart
+        setCartIsOpen={setCartIsOpen}
+        setShopFade={setShopFade}
+        getInCart={getInCart}
+      />
       {getProduct ? (
         <LargeProductView
           product={getProduct}

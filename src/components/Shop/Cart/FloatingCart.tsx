@@ -1,12 +1,18 @@
 import React from 'react';
 import { BsFillCartFill } from 'react-icons/bs';
+import Product from '../ShopPage/ProductInterface';
 
 interface Props {
   setCartIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setShopFade: React.Dispatch<React.SetStateAction<boolean>>;
+  getInCart: Product[];
 }
 
-const FloatingCart: React.FC<Props> = ({ setCartIsOpen, setShopFade }) => {
+const FloatingCart: React.FC<Props> = ({
+  setCartIsOpen,
+  setShopFade,
+  getInCart,
+}) => {
   return (
     <div
       className='floating-cart'
@@ -15,6 +21,9 @@ const FloatingCart: React.FC<Props> = ({ setCartIsOpen, setShopFade }) => {
         setShopFade(false);
       }}
     >
+      {getInCart.length > 0 && (
+        <div className='cart-counter'>{getInCart.length}</div>
+      )}
       <BsFillCartFill className='cart-icon' />
     </div>
   );

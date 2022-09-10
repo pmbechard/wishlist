@@ -121,6 +121,7 @@ const App: React.FC = () => {
                   setCartIsOpen={setCartIsOpen}
                   setShopFade={setShopFade}
                   handleAddToCart={handleAddToCart}
+                  getInCart={getInCart}
                 />
               }
             />
@@ -138,6 +139,7 @@ const App: React.FC = () => {
                   setShopFade={setShopFade}
                   setCartIsOpen={setCartIsOpen}
                   handleAddToCart={handleAddToCart}
+                  getInCart={getInCart}
                 />
               }
             />
