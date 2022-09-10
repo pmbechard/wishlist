@@ -22,7 +22,7 @@ const FloatingCart: React.FC<Props> = ({
       }}
     >
       {getInCart.length > 0 && (
-        <div className='cart-counter'>{getInCart.length}</div>
+        <g className='cart-counter'>{getInCart.length}</g>
       )}
       <BsFillCartFill className='cart-icon' />
     </div>
